@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function add(){
+var a,b,c;
+a=Number(document.getElementById("num1").value);
+b=Number(document.getElementById("num2").value);
+c= a + b;
+document.getElementById("num3").value= c;
+}
+</script>
+</head>
+<body>
+Enter the First number : <input id="num1">
+Enter the Second number: <input id="num2">
+<button onclick="add()">Add</button>
+<input id="num3">
+</body>
+</html>

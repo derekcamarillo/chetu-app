@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+    <div class="col-3 d-grid gap-3 p-5">
+        <form action="" name="screenjs">
+            First Number :- <input type="text" name="num1" class="form-control mt-3 p-2 bg-light border" placeholder="Enter First Number" id="num1">
+            Second Number :- <input type="text" name="num2" class="form-control mt-3 p-2 bg-light border" placeholder="Enter Second Number" id="num2"> 
+            Show result here :- <input type="text" name="num3" class="form-control mt-3 p-2 bg-light border" placeholder="Result" id="num3">
+            <input type="button" class="mt-5 btn btn-primary m-1" value="Addition" onclick="add()">
+            <input type="button" class="mt-5 btn btn-primary m-1" value="Subtraction" onclick="sub()">
+            <input type="button" class="mt-5 btn btn-primary m-1" value="Multiplication" onclick="mul()">
+            <input type="button" class="mt-5 btn btn-primary m-1" value="Devision" onclick="dev()">
+            <input type="button" class="mt-5 btn btn-primary m-1" value="Square" onclick="sqr()">
+            <input type="button" class="mt-5 btn btn-primary m-1" value="Cube" onclick="cube()">
+            <input type="button" class="mt-5 btn btn-primary m-1" value="Modulus" onclick="mod()">
+            <input type="button" class="mt-5 btn btn-primary m-1" value="SqureRoot" onclick="sqrr()">
+            <input type="button" class="mt-5 btn btn-primary m-1" value="Increment" onclick="inc()">
+            <input type="button" class="mt-5 btn btn-primary m-1" value="Decrement" onclick="dec()">
+
+        </form>
+    </div>
+
+    <script>
+        function add()
+            {
+                var a,b,c;
+                a=Number(document.getElementById("num1").value);
+                b=Number(document.getElementById("num2").value);
+                c= a + b;
+                document.getElementById("num3").value= c;
+            }
+
+        function sub()
+            {
+                var a,b,c;
+                a=Number(document.getElementById("num1").value);
+                b=Number(document.getElementById("num2").value);
+                c= a - b;
+                document.getElementById("num3").value= c;
+            }
+        function mul()
+            {
+                var a,b,c;
+                a=Number(document.getElementById("num1").value);
+                b=Number(document.getElementById("num2").value);
+                c= a * b;
+                document.getElementById("num3").value= c;
+            }
+        function dev()
+            {
+                var a,b,c;
+                a=Number(document.getElementById("num1").value);
+                b=Number(document.getElementById("num2").value);
+                c= a / b;
+                document.getElementById("num3").value= c;
+            }
+        function sqr()
+            {
+                var a,c;
+                a=Number(document.getElementById("num1").value);
+                c= a * a;
+                document.getElementById("num3").value= c;
+            }
+        function cube()
+            {
+                var a,c;
+                a=Number(document.getElementById("num1").value);
+                c= a * a * a;
+                document.getElementById("num3").value= c;
+            }
+        function mod()
+            {
+                var a,c,b;
+                a=Number(document.getElementById("num1").value);
+                b=Number(document.getElementById("num2").value);
+                c= a % b;
+                document.getElementById("num3").value= c;
+            }
+        function sqrr()
+            {
+                var a,c;
+                a=Number(document.getElementById("num1").value);
+                c = Math.sqrt(a);
+                document.getElementById("num3").value= c;
+            }
+        function inc()
+            {
+                var a,c;
+                a=Number(document.getElementById("num1").value);
+                c = ++a;
+                document.getElementById("num3").value= c;
+            }
+        function dec()
+            {
+                var a,c;
+                a=Number(document.getElementById("num1").value);
+                c = --a;
+                document.getElementById("num3").value= c;
+            }
+    </script>
+</body>
+</html>
