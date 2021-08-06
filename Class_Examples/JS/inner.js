@@ -4,10 +4,10 @@ function validate()
 		var userpassword = document.getElementById("userpassword").value;
 		if(username=="admin" && userpassword=="pass")
 		{
-			document.getElementById("msg").innerText=<h1>Welcome User<h1>;
+			document.getElementById("msg").innerText="<h1>Welcome User<h1>";
 		}
 		else
 		{
-			document.getElementById("msg").innerHTML = <h1> Invalid User <h1>;
+			document.getElementById("msg").innerHTML = "<h1> Invalid User <h1>";
 		}
 	}
