@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predef Obj By Defining Array Size</title>
+</head>
+<body>
+    <input type="button" value="submit" onclick="f1()">
+
+    <script>
+        // Use Predefined Object Name Defining Array Size. 
+       function f1()
+            {
+                var arr = new Array(3); // Defineing Array Size.
+                var arr = new Array(); // Array Size Undefined.
+                for(x in arr)
+                {
+                    document.write(arr[x]);
+                }
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predef Obj By Constructor</title>
+</head>
+<body>
+    <input type="button" value="submit" onclick="f1()">
+
+    <script>
+        // Use Predefined Object Name By Using Class Object
+       function f1()
+            {
+                var arr = new Array(201, 202, 203);
+                for(x in arr)
+                {
+                    document.write(arr[x]);
+                }
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Expression</title>
+</head>
+<body>
+    <input type="button" value="submit" onclick="f1()">
+
+    <script>
+        /*In a class declertaion we can't use same class name it shows error. But In Class Expression we can use same class name. It can override the value. */
+        var e = class 
+            {
+                eno = 101;
+                ename = "Neel Kumar Maurya"
+                esal = 120000;
+                info = function()
+                    {
+                        return this.eno + " " + this.ename + " " + this.esal;
+                    }
+            }
+
+        var e = class 
+            {
+                eno = 102;
+                ename = "Sunil Kumar Maurya"
+                esal = 150000;
+                info = function()
+                    {
+                        return this.eno + " " + this.ename + " " + this.esal;
+                    }
+            }
+
+        function f1()
+            {
+                emp = new e();
+                document.write("<h1>" + emp.info());
+            }
+        
+    </script>
+</body>
+</html>

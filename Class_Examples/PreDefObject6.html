@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predef Obj By MD Array Litreal</title>
+</head>
+<body>
+    <input type="button" value="submit" onclick="f1()">
+
+    <script>
+        // Use Predefined Object Name By Using MultiDimensional Array By Litreal.
+       function f1()
+            {
+                var arr = new Array([11, 22, 33], [10, 20, 30], [30, 40, 50]);
+                for(var i=0; i<3; i++)
+                {
+                    for(var j = 0; j<3; j++)
+                    {
+                       document.write(" "+arr[i][j]); 
+                    }
+                    document.write("<br>");
+                }
+            }
+    </script>
+</body>
+</html>

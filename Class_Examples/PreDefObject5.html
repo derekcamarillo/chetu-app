@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predef Obj By MultiDimensional Array</title>
+</head>
+<body>
+    <input type="button" value="submit" onclick="f1()">
+
+    <script>
+        // Use Predefined Object Name Defining Array Size. 
+       function f1()
+            {
+                var arr = new Array();
+                arr[0] = new Array(101, 102, 103, 104);
+                arr[1] = new Array(201, 202, 203, 204);
+                arr[2] = new Array(301, 302, 303, 304);
+                for(var i=0; i<3; i++)
+                {
+                    for(var j = 0; j<4; j++)
+                    {
+                       document.write("\t"+arr[i][j]); 
+                    }
+                    document.write("<br>");
+                }
+            }
+    </script>
+</body>
+</html>

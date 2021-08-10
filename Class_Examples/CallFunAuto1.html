@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Call Function</title>
+</head>
+<body>
+    <input type="button" value="submit" onclick="f1()">
+
+    <script>
+        class Employee //In this program we can define Function Call Autometically.
+            {
+                eno = 101;
+                ename = "Neel Kumar Maurya"
+                esal = 120000;
+                info = function()
+                    {
+                        return this.eno + " " + this.ename + " " + this.esal;
+                    }
+            }
+        emp = new Employee();
+        alert(emp.info());
+    </script>
+</body>
+</html>
