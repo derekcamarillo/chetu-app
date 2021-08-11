@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+<body>
+    <input type="button" value="submit" onclick="f1()">
+
+    <script>
+       function f1()
+            {
+                try{
+                    document.write(num);
+                }
+                catch(obj)
+                    {
+                        document.write("<h1>1. "+ obj + "</h1>");
+                        document.write("<h1>2. Exception Name is: "+ obj.name + "</h1>");
+                        document.write("<h1>3. Exception Description is: "+ obj.message + "</h1>")
+                        document.write("<h1>4. Please Declear Veriable</h1>")
+                    }
+                    document.write("<br> Hello Exception Handling.")
+            }
+    </script>
+</body>
+</html>

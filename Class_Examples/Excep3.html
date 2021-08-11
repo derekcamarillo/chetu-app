@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="t1" placeholder="Enter First Number">
+        <input type="text" id="t2" placeholder="Enter Second Number">
+        <input type="text" id="t3" placeholder="Result">
+        <input type="button" value="submit" onclick="f1()">
+    </form>
+    <script>
+       function f1()
+            {
+                try
+                    {
+                        let num1 = parseInt(document.getElementById("t1").value);
+                        let num2 = parseInt(document.getElementById("t2").value);
+                        if(num2 == 0)
+                            {
+                                throw "U can not Divided By Zero";
+                            }
+                        if(isNaN(num1) || isNaN(num2))
+                            {
+                                throw new Error ("U can pass only Number");
+                            }
+                        if(num1<0 || num2<0)
+                            {
+                                throw new Error ("U can pass only Positive Value");
+                            }
+                        let num3 = num1 / num2;
+                        document.getElementById("t3").value=num3;
+                    }
+                catch(obj)
+                    {
+                        document.write("<h1>"+ obj + "</h1>");
+                    }
+            }
+    </script>
+</body>
+</html>
