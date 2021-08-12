@@ -102,20 +102,21 @@ function f5()
 function f6()
 	{
 		// alert("hellovar")
-		var arr = [10, 15, 90, 84, 35, 22, 1, 8, 28];
-		var evens = [];
-		var odds = [];
-		document.write("<h3>Original Array<br></h3>");
-		document.write(arr + "<br>");
-		var evennum = function(arr)
-			{
-				for(var i = 0; i<arr.length; i++)
-					{
-						if(arr[i] % 2 === 1)
-							{
-								document.write("<h4>Evens value of Array is :-  " + arr[i] +"</h3>")
-							}
-					}
-			}
+		var a, b=0, even=0, odd=0;
+                for(a=0; a<5; a+1)
+                    {
+                        b = Number(prompt("Enter the numbers."));
+                        document.write("<h3>Original number is:  "+ b + "</h3>")
+                        if(b%2==0)
+                            {
+                                even = even+1
+                            }
+                        else
+                            {
+                                odd = odd+1
+                            }
+                            a = a+1
+                    }
+                    document.write("<h2>Totel even numbers is " + even + " Total odd number is " + odd+"</h2>");
 		
 	}

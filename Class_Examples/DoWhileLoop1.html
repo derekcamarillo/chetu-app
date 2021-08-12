@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop</title>
+</head>
+<body>
+    <input type="button" value="submit" onclick="f1()">
+
+    <script>
+        // Enter 5 number print number is even or odd
+       function f1()
+            {
+                var a = 0, b=0, even=0, odd=0;
+                do
+                    {
+                        b = Number(prompt("Enter the numbers."));
+                        if(b%2==0)
+                            {
+                                even = even+1
+                            }
+                        else
+                            {
+                                odd = odd+1
+                            }
+                            a = a+1
+                    }
+                    while(a<5)
+                    document.write("Totel even numbers is " + even + " Total odd number is " + odd);
+            }
+    </script>
+</body>
+</html>

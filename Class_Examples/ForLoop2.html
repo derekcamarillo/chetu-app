@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop</title>
+</head>
+<body>
+    <input type="button" value="submit" onclick="f1()">
+
+    <script>
+        // Enter 5 number print max number.
+       function f1()
+            {
+                var a, num=0, high=0;
+                for(a=0; a<5; a+1)
+                    {
+                        num = parseInt(prompt("Enter the numbers."));
+                        if(num>high)
+                            {
+                                high = num;
+                            }
+                            a = a+1
+                    }
+                    document.write("Highest number is:-  "+high);
+            }
+    </script>
+</body>
+</html>
