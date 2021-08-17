@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+<body>
+    <form>
+       <!--  <input type="text" id="t1" placeholder="Enter First Number">
+        <input type="text" id="t2" placeholder="Enter Second Number">
+        <input type="text" id="t3" placeholder="Result"> -->
+        <input type="button" value="submit" onclick="f1()">
+    </form>
+    <script>
+       function f1()
+            {
+                //String Length Method
+                document.write("<h3>How to count String Length with(.length)</h3>");
+                var a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                document.write("<b>String length is :-  </b>"+a.length+"<br><br>");
+
+
+                //String Sliceing Method
+                document.write("<h3>How to Slice String with(.slice)</h3>");
+                var a = "Sunil, Kumar, Maurya, is, living, in, Noida";
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                document.write("<b>This Ex. show sting 7 to position 25  </b>:-  "+a.slice(7,25)+"<br>");
+                document.write("<b>This Ex. show negative sting to -12 position -3:-  </b>"+a.slice(-12,-3)+"<br>");
+                document.write("<b>Slice out the rest of the string pass only 7:-  </b>"+a.slice(7)+"<br>");
+                document.write("<b>String counting from the end :-  </b>"+a.slice(-25)+"<br><br>");
+
+                //String Substring Method
+                document.write("<h3>Using of Substring Method(.substring cannot accept negative value)</h3>");
+                var a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                document.write("<b>Substring length is :-  </b>"+a.substring(7,13)+"<br><br>");
+
+                
+                //String Substr Method
+                document.write("<h3>Using of Substr Method(.substr )</h3>");
+                var a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                document.write("<b>Substr length is :-  </b>"+a.substr(7,13)+"<br><br>");
+                document.write("<b>Substr length is :-  </b>"+a.substr(7)+"<br><br>");
+                document.write("<b>Substr negative length is :-  </b>"+a.substr(-4)+"<br><br>");  
+
+                //String Replacing Method
+                document.write("<h3>How to Replace String with(.replace)</h3>");
+                var a = "Sunil Kumar Maurya Sunil in Noida & Sunil in Delhi";
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                document.write("<b>Replace Sunil to Neel:  </b>"+ a.replace("Sunil","Neel") + "<br>");
+                document.write("<b>To replace case insensitive, use a regular expression with an /i flag (insensitive):  </b>"+ a.replace(/SUNIL/i,"Neel") + "<br>"); 
+                document.write("<b>Replace all Matches:  </b>"+ a.replace(/Sunil/g,"Neel") + "<br><br>");
+
+                //Coverting Uppercase To Lowercase
+                document.write("<h3>Coverting Uppercase to Lowercase & Lowercase to Uppercase(toUpperCase() & toLowerCase())</h3>");
+                var a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                var b = "abcdefghijkl"
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                document.write("<b>Substring length is :-  </b>"+b.toUpperCase()+"<br>");
+                document.write("<b>Substring length is :-  </b>"+a.toLowerCase()+"<br><br>");
+
+                //Concat Method 
+                document.write("<h3>Concat Mathod on string(.concat)</h3>");
+                var a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                var b = "abcdefghijkl"
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                document.write("<b>Concatinated String :-  </b>"+a.concat(" ",b)+"<br><br>");
+
+                //JavaScript String Padding
+                document.write("<h3>Javascript string Padding(.padStart & .padEnd)</h3>");
+                var a = "84";
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                document.write("<b>Original String is:  </b>"+ a.padStart(4,"*") + "<br>");//4 is used for how many pad do you want and * is used for what do you want to write on padding place.
+                document.write("<b>Original String is:  </b>"+ a.padEnd(4,0) + "<br><br>");//4 is used for how many pad do you want and 0 is used for what do you want to write on padding place.
+
+                //CharAt Method on String(Return charecter position)
+                document.write("<h3>The charAt() method returns the character at a specified index (position) in a string:</h3>");
+                var a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                document.write("<b>Return character on position 8:  </b>"+ a.charAt(8) + "<br><br>");
+
+                //CharCodeAt Method on String(Return character Unicode Position)
+                document.write("<h3>The charCodeAt() method returns the unicode of the character at a specified index in a string:</h3>");
+                var a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                document.write("<b>Return the Unicode of Character on position 7:  </b>"+ a.charCodeAt(7) + "<br><br>");
+
+                //Converting a String to an Array
+                document.write("<h3>How to Convert a String to an Array(.split)</h3>");
+                var a = "Sunil, Kumar, Maurya, is, living, in, Noida";
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                var b = a.split(",");
+                document.write("<b>String Converted to Array:  </b>"+ b[0] + "<br>");
+
+                //IndexOf in string.
+                document.write("<h3>Using IndexOf Method(.indexOf)</h3>");
+                var a = "Sunil, Kumar, Maurya, is, living, in, Noida";
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                document.write("<b>Showing Index of Maurya:  </b>"+ a.indexOf("Maurya") + "<br>");
+
+                //LastIndexOf in string.
+                document.write("<h3>Using lastIndexOf Method(.lastIndexOf)</h3>");
+                var a = "Sunil, Kumar, Maurya, is, living, in, Noida";
+                document.write("<b>Original String is:  </b>"+ a + "<br>");
+                document.write("<b>Showing Last Index of Noida:  </b>"+ a.lastIndexOf("Noida") + "<br>");
+
+
+
+
+
+
+            }
+    </script>
+</body>
+</html>
