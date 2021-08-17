@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Loops</title>
+</head>
+<body>
+    <input type="button" value="submit" onclick="f1()">
+
+    <script>
+       function f1()
+            {
+                var r = 1;
+                while(r<5)
+                    {
+                        var c = 1;
+                        while(c<=r)
+                            {
+                                // document.write(r+" ");
+                                 document.write(c+" ");
+                                c=c+1;
+                            }
+                        r=r+1
+                        document.write("<br>");
+                    }
+            }
+    </script>
+</body>
+</html>

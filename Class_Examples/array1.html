@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Array</title>
+</head>
+<body>
+<script type="text/javascript">
+	//The array are basically used to store multiple values in a single varialble itself.
+	//So the aaray is special variable which can hold more then one value at a time.
+	// Syntex to write array { let array_name=[item1, item2, item3,....]; }
+var arr = [10,20,30,40,50] //This is how we can write array.
+// document.write("<ul>")
+var len = arr.length;
+var sum = 0;
+for(var a=0; a<len; a++)
+	{
+		document.write(arr[a]+"<br>") //This is how to print all array items.
+		sum = sum + arr[a] //This how to add all array Elements.
+	}
+document.write("Total Sum:-  "+sum)
+</script>
+</body>
+</html>
