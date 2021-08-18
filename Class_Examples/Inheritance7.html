@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hybried Inheritance</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	//Hybried Inheritance 
+
+	class Mix
+		{
+			static show()
+				{
+					document.write("Base")
+				}
+		}
+	class Test extends Mix
+		{
+			display()
+				{
+					// We can use static method in non-static method by using class name.
+					// Mix.show(); //Type 1
+					Test.show(); //Type 2
+					document.write("Derived")
+				}	
+		}
+	
+	function f1()
+		{
+			new Test().display();
+		}
+</script>
+</body>
+</html>

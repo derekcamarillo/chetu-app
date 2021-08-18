@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Single Inheritance</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	//Single Inheritance
+
+	class Parent
+		{
+			show() //Non-Static Method
+				{
+					document.write("<h1>Father</h1>");
+				}
+		}
+	class Child extends Parent
+		{
+
+		}
+	function f1()
+		{
+			child = new Child();
+			child.show();
+		}
+</script>
+</body>
+</html>

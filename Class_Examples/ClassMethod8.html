@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Method OverLoading</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	class Test
+		{
+			static sum()
+				{
+					document.write("First");
+				}
+			static sum(x)
+				{
+					document.write("Second");
+				}
+			static sum(x, y)
+				{
+					document.write("Third");
+				}
+		}
+	function f1()
+		{
+			Test.sum();
+		}
+</script>
+</body>
+</html>

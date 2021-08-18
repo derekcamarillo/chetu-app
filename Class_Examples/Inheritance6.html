@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hybried Inheritance</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	//Hybried Inheritance 
+
+	class Mix
+		{
+			show()
+				{
+					document.write("Base")
+				}
+		}
+	class Test extends Mix
+		{
+			display()
+				{
+					// If we want to use non-static method in another non-static method then we can use this keyword
+					this.show();
+					document.write("Derived")
+				}	
+		}
+	
+	function f1()
+		{
+			new Test().display();
+		}
+</script>
+</body>
+</html>
+
+<!-- We can't use non-static method in static method in javascript -->

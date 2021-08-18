@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Herarical Inheritance</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	//Herarical Inheritance 
+
+	class Father
+		{
+			show()
+				{
+					document.write("Father")
+				}
+		}
+	class Child1 extends Father
+		{
+			
+		}
+	class Child2 extends Father
+		{
+
+		}
+	function f1()
+		{
+			child1 = new Child1();
+			child2 = new Child2();
+			child1.show();
+			child2.show();
+		}
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Multilevel Inheritance</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	//Multilevel Inheritance with static and non-static veriable
+
+	class Grand
+		{
+			x = 100;	//Non-Static Veriable
+		}
+	class Parent extends Grand
+		{
+			static y = 200; //Static Veriable
+		}
+	class Child extends Parent
+		{
+
+		}
+	function f1()
+		{
+			child = new Child();
+			document.write(child.x + "<br>");
+			document.write(Child.y);
+		}
+</script>
+</body>
+</html>
