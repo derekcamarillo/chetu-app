@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Private Variable</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	class Employee
+		{
+			constructor()
+				{
+					var eno; //Private Variable
+				}
+			setEno(eno)
+				{
+					this.eno = eno;
+				}
+			getEno()
+				{
+					return this.eno;
+				}
+		}
+	function f1()
+		{
+			employee = new Employee();
+			employee.setEno(101);
+			document.write("No is:-   "+employee.getEno());
+		}
+</script>
+</body>
+</html>

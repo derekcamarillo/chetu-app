@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>EvenOdd</title>
+</head>
+<body>
+	<script>
+		var a = 0;
+		var b = 0;
+		var count = 0, count0 = 0;
+		while(a<5)
+			{
+				b = Number(prompt("Enter the numbers"));
+				if (b%2==0) 
+					{
+						count = count + 1;
+					}
+				else{
+						count0 = count0 + 1
+					}
+					a = a+1
+					document.write("<h1> "+ b +"</h1>");
+			}
+		document.write("<h2> Total Even Number is: " + count + "</h2><h2> Total Odd Number is: " + count0+"</h2>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Static&Non-Static</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	class Emp
+		{
+			constructor (eno, ename, esal)
+				{
+					this.eno = eno;
+					this.ename =  ename;
+					this.esal = esal;
+				}
+			display()
+				{
+					document.write("<h1>Emp Number is=>  " + this.eno+"</h1>");
+					document.write("<h1>Emp Name is=>    " + this.ename+"</h1>");
+					document.write("<h1>Emp Salery is=>    " + this.esal+"</h1>");
+				}
+			static cube(num)
+				{
+					return num * num * num
+				}
+		}
+	function f1()
+		{
+			emp = new Emp(101, "Neel", 50000);
+			emp.display();
+			document.write("<h2>Cube of 2 is:-  "+Emp.cube(2)+"</h2>");
+		}
+</script>
+</body>
+</html>

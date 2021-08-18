@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Static&Non-Static</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	class Emp
+		{
+			no = 101; //non-static veriable
+			static name = "Neel"; //static veriable
+		}
+	function f1()
+		{
+			emp = new Emp();
+			document.write("<h1>Emp Number is=>  "+ emp.no+"</h1>");
+			document.write("<h1>Emp Name is=>    "+ Emp.name+"</h1>");
+		}
+</script>
+</body>
+</html>

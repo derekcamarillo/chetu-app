@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		h3{
+				border: 1px solid red;
+				display: flex;
+				justify-content: center;
+			}
+	</style>
+</head>
+<body>
+	<h2>Q.= What is your Name.</h2>
+	<h3 onclick="name()">ClickMe</h3>
+	<h2 id="m"></h2>
+<script>
+	function name()
+		{
+			var myName = prompt("What is your Name.");
+			document.getElementById("m").innerHTML = myName;
+		}
+</script>
+</body>
+</html>

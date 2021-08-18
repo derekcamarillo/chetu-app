@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MinMax</title>
+</head>
+<body>
+<script>
+	var i = 0, num = 0;
+	var high = 0;
+	while(i<3)
+		{
+			num = parseInt(prompt("Enter the numbers: "));
+			if (num > high) {
+					high = num;
+				}
+				i = i + 1
+				document.write(" "+ num)
+		}
+		document.write("<br>Max value is: " + num);
+
+</script>
+</body>
+</html>

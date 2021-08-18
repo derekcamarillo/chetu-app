@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Static&Non-Static</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	class Test
+		{
+			x = 0;
+			static y = 0;
+			process()
+				{
+					this.x = this.x + 1
+					Test.y = Test.y + 1
+					document.write("<h2>Value of x is:-  "+this.x+"</h2>");
+					document.write("<h2>Value of y is:-  "+Test.y+"</h2>");
+					document.write("<hr color='blue'>");
+				}	
+		}
+	function f1()
+		{
+			//new Test().process(); //Ananonyms Object
+			t1 = new Test();
+			t2 = new Test();
+			t3 = new Test();
+			t1.process();
+			t2.process();
+			t3.process();
+		}
+</script>
+</body>
+</html>
