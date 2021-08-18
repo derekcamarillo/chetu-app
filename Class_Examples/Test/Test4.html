@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple With Has-A</title>
+</head>
+<body>
+    <button onclick="f1()">ClickMe</button>
+
+    <script>
+        class Grand
+            {
+                show()
+                    {
+                        document.write("GrandFather<br>")
+                    }
+            }
+        class Parent
+            {
+                show()
+                    {
+                        
+                        document.write("I am Father.<br>");
+                    }
+            }
+        class Child
+            {
+                display2()
+                    {   var par = new Grand();
+                        par.show();
+                        var dis = new Parent();
+                        dis.show();
+                        document.write("I am Child.<br>")
+                    }
+            }
+        function f1()
+            {
+                child = new Child();
+                child.display2();
+            }
+    </script>
+    
+</body>
+</html>

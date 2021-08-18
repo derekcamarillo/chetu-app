@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyclic With Has-A</title>
+</head>
+<body>
+    <button onclick="f1()">ClickMe</button>
+
+    <script>
+        class Parent
+            {
+                show()
+                    {   
+                        var chi = new Child();
+                        chi.display();
+                        document.write("Father")
+                    }
+            }
+        class Child
+            {
+                display()
+                    {
+                        var par = new Parent();
+                        par.show();
+                        document.write("I am Child");
+                    }
+            }
+        function f1()
+            {
+                child = new Child();
+                child.display();
+            }
+    </script>
+    
+</body>
+</html>

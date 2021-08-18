@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herarical With Has-A</title>
+</head>
+<body>
+    <button onclick="f1()">ClickMe</button>
+
+    <script>
+        class Parent
+            {
+                show()
+                    {   
+                        document.write("Father : ")
+                    }
+            }
+        class Child1
+            {
+                display()
+                    {
+                        var par = new Parent();
+                        par.show();
+                        document.write("I am Child1 <br>");
+                    }
+            }
+        class Child2
+            {
+                display1()
+                    {
+                        var par = new Parent();
+                        par.show();
+                        document.write("I am Child2<br>");
+                    }
+            }
+        function f1()
+            {
+                child = new Child1();
+                child.display();
+                child2 = new Child2();
+                child2.display1();
+            }
+    </script>
+    
+</body>
+</html>

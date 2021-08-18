@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test1</title>
+</head>
+<body>
+    <button onclick="f1()">ClickMe</button>
+
+    <script>
+        class Add
+            {
+                sum(x,y)
+                    {
+                        this.x = x;
+                        this.y = y;
+                        document.write("Value of x is:- "+ this.x+"<br>Value of is:- "+this.y)
+                        document.write("<br>Total is:-  ")
+                        document.write(this.x+this.y)
+                        
+                    }
+            }
+        class Multi extends Add
+            {
+                mul(x,y)
+                    {
+                        this.x = x;
+                        this.y = y;
+                        document.write("Value of x is:- "+ this.x+"<br>Value of is:- "+this.y)
+                        document.write("<br>Total is:-  ")
+                        document.write(this.x*this.y)
+                    }
+            }
+        // class Total extends Multi
+        //     {
+        //         show()
+        //         {
+        //             document.write(this.i);
+        //             document.write(this.j);
+        //         }
+        //     }
+        function f1()
+            {
+                total = new Multi();
+                total.sum(10,20);
+                total.mul(10,20);
+
+            }
+    </script>
+    
+</body>
+</html>
