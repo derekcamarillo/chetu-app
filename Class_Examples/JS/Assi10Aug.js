@@ -104,7 +104,7 @@ function f6()
 		// alert("hellovar")
 		var a, b=0, even=0, odd=0;
                 for(a=0; a<5; a+1)
-                    {
+                   {
                         b = Number(prompt("Enter the numbers."));
                         document.write("<h3>Original number is:  "+ b + "</h3>")
                         if(b%2==0)
@@ -163,11 +163,12 @@ function f8()
     {
         var count = 0;
         var a = parseInt(prompt("Enter the number:- "));
-        for(var i=2; i<a/2; i++)
+        for(var i=2; i<=a/2; i++)
             {
                 if(a%i==0)
                 {
                     count++;
+                    break;
                 }
             }
         if (count == 1)
@@ -179,3 +180,22 @@ function f8()
                 document.write(a + " is a Prime Number");
             }
     }
+
+    //Reverse a number 
+
+    function f9()
+    	{
+    		var num = parseInt(prompt("Enter the number:"))
+    		var rev = 0;
+    		var rem;
+    		document.write("Original Number is:-  "+num+"<br>");
+    		while(num != 0)
+    			{
+    				rem = num % 10;
+    				rev = rev * 10 + rem;
+    				num = parseInt(num/10)
+    			}
+    		
+    		document.write("Reversed Number is:-  "+rev)
+
+    	}
