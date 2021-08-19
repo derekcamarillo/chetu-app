@@ -120,3 +120,62 @@ function f6()
                     document.write("<h2>Totel even numbers is " + even + " Total odd number is " + odd+"</h2>");
 		
 	}
+
+
+//Function to find prime number or not
+    //Type 1
+    function f7()
+        {
+            const num = parseInt(prompt("Enter the number:- "));
+            let isPrime = true;
+            if(num === 1)
+                {
+                    document.write("1 is not a prime or composite");
+                }
+            else if(num>1)
+                {
+                    for(let i = 2; i<num; i++)
+                        {
+                            if(num%i==0)
+                                {
+                                    isPrime = false;
+                                    break;
+                                }
+                        }
+                    if(isPrime)
+                        {
+                            document.write(`${num} is a Prime Number`);
+                        }
+                    else
+                        {
+                            document.write(`${num} is not a Prime Number`);
+                        }
+                }
+            else
+                {
+                    document.write("The number is not prime");
+                }
+        }
+
+    //Type 2
+
+function f8()
+    {
+        var count = 0;
+        var a = prompt("Enter the Number");
+        for(var i=2; i<a/2; i++)
+            {
+                if(a%i==0)
+                {
+                    count++;
+                }
+            }
+        if (count == 1)
+            {
+                document.write(a+" is not a prime number");
+            }
+        else
+            {
+                document.write(a + " is a Prime Number");
+            }
+    }
