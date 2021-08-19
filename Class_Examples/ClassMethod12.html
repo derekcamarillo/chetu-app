@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Static&Non-Static</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	
+	class Test
+		{
+			
+			
+			constructor()
+				{
+					document.write("<h1> Test class Constructor</h1>");
+				}
+			static display()
+				{
+					var t = new Test();
+					document.write("<h1> Static Method in Test Class </h1>");
+				}
+		}
+	function f1()
+		{
+			Test.display();
+		}
+</script>
+</body>
+</html>

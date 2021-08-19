@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Method Overriding</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+
+	// If we want to use child class overriden of parent class then we use super keyward.
+	class Parent
+		{
+			property()
+				{
+					document.write("<h1>Gold | Cash | Land</h1>");
+				}
+			marry()
+				{
+					document.write("<h1>Fathers Choice</h1>");
+				}
+		}
+	class Child extends Parent
+		{
+			marry()
+				{
+					super.marry();
+					document.write("<h1>After 6 months</h1>");
+				}
+		}
+	function f1()
+		{
+			child = new Child();
+			child.property();
+			child.marry();
+		}
+</script>
+</body>
+</html>

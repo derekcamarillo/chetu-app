@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Static&Non-Static</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	// When we create own constructor then super keyword is not mantioned by default.
+	// The super keyword is defined by programmer when we create own constructor. If we not define it's give error.
+	class Test
+		{
+			constructor()
+				{
+					document.write("<h1> Test class Constructor</h1>");
+				}
+		}
+	class Mix extends Test
+		{
+			// This is a default constructor
+			constructor()
+				{
+					super(); // Super is keyword which refered to immidiate parent class constructor.
+				}
+
+			process()
+				{
+					document.write("<h1>Mix Class Method</h1>")
+				}
+		}
+	function f1()
+		{
+			new Mix().process();
+		}
+</script>
+</body>
+</html>

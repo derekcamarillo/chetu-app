@@ -162,7 +162,7 @@ function f6()
 function f8()
     {
         var count = 0;
-        var a = prompt("Enter the Number");
+        var a = parseInt(prompt("Enter the number:- "));
         for(var i=2; i<a/2; i++)
             {
                 if(a%i==0)

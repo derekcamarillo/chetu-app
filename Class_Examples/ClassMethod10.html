@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Static&Non-Static</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	// If we  want to call static method in static method in same Class then we use Class Name(this keyword is also working in same class).
+	class Test
+		{
+			
+			
+			static show()
+				{
+					document.write("<h1> Show </h1>");
+				}
+			static display()
+				{
+					//this.show();
+					Test.show();
+					document.write("<h1> Display </h1>");
+				}
+		}
+	function f1()
+		{
+			Test.display();
+		}
+</script>
+</body>
+</html>

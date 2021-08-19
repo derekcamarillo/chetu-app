@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Method Overriding</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+// Method Overriding: when Child class not happy with Parent class method implementation then child can implement the method.(It is called Polymorphisam).
+	class Parent
+		{
+			property()
+				{
+					document.write("<h1>Gold | Cash | Land</h1>");
+				}
+			marry()
+				{
+					document.write("<h1>Fathers Choice</h1>");
+				}
+		}
+	class Child extends Parent
+		{
+			marry()
+				{
+					document.write("<h1>Child Choice</h1>");
+				}
+		}
+	function f1()
+		{
+			child = new Child();
+			child.property();
+			child.marry();
+		}
+</script>
+</body>
+</html>

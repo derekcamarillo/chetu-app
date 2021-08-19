@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Static&Non-Static</title>
+</head>
+<body>
+	<div class="">
+		<button onclick="f1()">Submit</button>
+	</div>
+	
+<script>
+	// Using Super Keyword Single Inheritence
+		class Test
+		{
+			constructor()
+				{
+					document.write("<h1> Test class Constructor</h1>");
+				}
+		}
+	class Mix extends Test
+		{
+			constructor()
+				{
+					document.write("<h1> Mix class Constructor</h1>");
+					super();
+				}
+
+			process()
+				{
+					document.write("<h1>Mix Class Method</h1>")
+				}
+		}
+	function f1()
+		{
+			new Mix().process();
+		}
+</script>
+</body>
+</html>
