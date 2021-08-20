@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilevel With Has-A</title>
+</head>
+<body>
+    <button onclick="f1()">ClickMe</button>
+    
+
+    <script>
+        //Find Vowels in string.
+        
+        function f1()
+            {
+                "use strict"
+
+                let s = prompt("Enter the String").toLowerCase();
+                let c;
+                for (var i=0; i<=s.length-1; i++)
+                {
+                    c = s[i]  // or s.charAt(i)
+                    if (c=="a"|| c=="e" || c=="i" || c=="o" || c=="u")
+                        {
+                            document.write(c)
+                        }
+                }
+            }
+    </script>
+    
+</body>
+</html>

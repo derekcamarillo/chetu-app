@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascending&Descending Insertion sort</title>
+</head>
+<body>
+    <button onclick="f1()">Ascending</button>
+    <button onclick="f2()">Descending</button>
+
+    <script>
+        // Ascending & Descending With Insertion Sort.
+        // Ascending Order
+        function f1()
+            {
+                var arr = [10,50,55,25,35,45,15,30];
+                document.write("<h1>Original Array:- "+arr+"</h1>");
+                var len = arr.length;
+                for (var i = 0; i < len; i++) 
+                {
+                    var target = arr[i];
+                    for (var j = i - 1; j >= 0 && (arr[j] > target); j--)
+                    {
+                        arr[j+1] = arr[j];
+                    }
+                    arr[j+1] = target
+                }
+                document.write("<h1>Shorted Array:- "+arr+"</h1>");
+            }
+        
+        //Descending Order
+        function f2()
+            {
+                var arr = [45,60,44,10,13,18,78,66,45];
+                document.write("<h1>Original Array:- "+arr+"</h1>");
+                var len = arr.length;
+                for (var i = 0; i < len; i++) 
+                {
+                    var target = arr[i];
+                    for (var j = i - 1; j >= 0 && (arr[j] < target); j--)
+                    {
+                        arr[j+1] = arr[j];
+                    }
+                    arr[j+1] = target
+                }
+                document.write("<h1>Shorted Array:- "+arr+"</h1>");
+            }
+    </script>
+    
+</body>
+</html>

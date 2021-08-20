@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilevel With Has-A</title>
+</head>
+<body>
+    <button onclick="f1()">ClickMe</button>
+
+    <script>
+        //Searching Elements from array.
+        function f1()
+            {
+                var arr = [10,50,55,25,35,45,15,30];
+                document.write("<h1>Original Array:- "+arr+"</h1>");
+                var len = arr.length;
+                var search = parseInt(prompt("Enter Number to search"));
+                var flag = false;
+                for(var i=0; i<len; i++)
+                    {
+                        if(arr[i]==search)
+                            {
+                                flag = true;
+                                break;
+                            }
+                    }
+                if(flag==false)
+                    {
+                        document.write("<h1>"+search+"  Number Not Found</h1>")
+                    }
+                else
+                    {
+                        document.write(search+"<h1>  Number Found</h1>")
+                    }
+            }
+    </script>
+    
+</body>
+</html>
