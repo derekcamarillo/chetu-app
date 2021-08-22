@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>String Length</title>
+</head>
+<body>
+<script>
+	//How to get length of string in javascript without using native length method.
+	function strLength(s) 
+		{
+			var length = 0;
+			document.write("<h1>Original String:-  "+ s +"</h1>");
+			while (s[length] !== undefined)
+				{
+					length++;
+				}
+			return length;
+		}
+
+	var fn = strLength(prompt("Enter the String"));
+	document.write("<h1> Length of String:-  "+ fn+"</h1>")
+</script>
+</body>
+</html>
