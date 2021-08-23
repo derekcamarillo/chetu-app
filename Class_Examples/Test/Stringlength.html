@@ -9,13 +9,13 @@
 	//How to get length of string in javascript without using native length method.
 	function strLength(s) 
 		{
-			var length = 0;
+			var len = 0;
 			document.write("<h1>Original String:-  "+ s +"</h1>");
-			while (s[length] !== undefined)
+			while (s[len] !== undefined)
 				{
-					length++;
+					len++;
 				}
-			return length;
+			return len;
 		}
 
 	var fn = strLength(prompt("Enter the String"));

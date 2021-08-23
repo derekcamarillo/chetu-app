@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>fibonacci series</title>
+        <script type="text/javascript">
+                function generateseries(){
+                    var fno = document.getElementById("firstno").value;
+                    var sno = document.getElementById("secondno").value;
+                    var a = parseInt(fno);
+                    var result = new Array();
+                    result[0] = a;
+                    var b = ++fno;
+                    var c = b;
+                    while (b <= sno) {  
+                    result.push(c);
+                    document.getElementById("maindiv").innerHTML = "Fibonacci Series between "+fno+ " and " +sno+ " is " +result;
+                        c = a + b;
+                        a = b;
+                        b = c;
+                    }
+                }
+                function numeric(evt){
+                    var theEvent = evt || window.event;
+                    var key = theEvent.keyCode || theEvent.which;
+                    key = String.fromCharCode(key);
+                    var regex = /[0-9]|\./;
+                    if (!regex.test(key)) {
+                        theEvent.returnValue = false;
+                        if (theEvent.preventDefault) 
+                            theEvent.preventDefault();
+                    }
+                }
+
+            </script>
+        <h1 align="center">Fibonacci Series</h1>
+    </head>
+    <body>
+        <div id="resultdiv" align="center">
+        <input type="text" name="firstno" id="firstno" onkeypress="numeric(event)"><br>
+        <input type="text" name="secondno" id="secondno" onkeypress="numeric(event)"><br>
+        <input type="button" id="result" value="Result" onclick="generateseries();">
+        <div id="maindiv"></div>
+        </div>
+    </body>
+</html>
