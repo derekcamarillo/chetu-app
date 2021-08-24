@@ -5,21 +5,24 @@
   <title>Pattern</title>
 </head>
 <body>
-<script>
-  var str ="NOIDA"
-  let n = 5;
-  let string = "";
-  
-  for (let i = 1; i <= str.length; i++)
-    {
-        // printing characters
-        for (let j = 0; j < i; j++) 
-          {
-            string += str[i]
-          }
-        string += "<br>";
-    }
-document.write(string);
-</script>
+    <p id="demo"></p>
+    <input type="button" value="click" onclick="f1()">
+    <script>
+        function f1()
+        {
+            const arr = ["N","O","I","D","A"];
+            let len = arr.length;
+            // document.write(arr);
+            for(var i = 0; i<len; i++)
+            {
+                for(var j = 0; j<= i; j++ )
+                {
+                    document.write(arr[j]);
+                }
+                document.write("</br>");
+            }
+
+        }
+    </script>
 </body>
 </html>
