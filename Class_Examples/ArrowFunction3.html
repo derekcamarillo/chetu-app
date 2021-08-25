@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <button onclick="f1()">ClickMe</button>
+
+    <script>
+        function f1()
+            {
+               //Single Statement or Single Parameter
+                let msg1 = name => `<h1> Welcome : ${name} </h1>`;
+                document.write(msg1("Sunil"));
+
+
+            // Multiple Parameter 
+                let msg2 = (sname, age) => `<h1> Welcome : ${sname}  age ${age}</h1>`;
+                document.write(msg2("Sunil Kumar", 25));
+            }
+    </script>
+    
+</body>
+</html>

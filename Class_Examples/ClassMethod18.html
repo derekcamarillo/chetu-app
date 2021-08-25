@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veriable Hideing</title>
+</head>
+<body>
+    <button onclick="f1()">ClickMe</button>
+
+    <script>
+    /* 
+        veriable Hideing.    
+    */
+        class Test
+            {
+                x = 100;
+            }
+        class Mix extends Test
+            {
+                x = 50;
+                show()
+                    {
+                        document.write("<h2>"+new Test().x+"</h2>"); //Showing Hided Veriable
+                        document.write("<h2>"+this.x+"</h2>");
+                    }
+            }
+        function f1()
+            {
+                new Mix().show();
+            }
+    </script>
+    
+</body>
+</html>

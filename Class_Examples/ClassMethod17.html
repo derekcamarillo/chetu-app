@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calling Static Veriable</title>
+</head>
+<body>
+    <button onclick="f1()">ClickMe</button>
+
+    <script>
+    /* 
+        veriable never override.    
+    */
+        class Test
+            {
+                static x = 100;
+            }
+        class Mix extends Test
+            {
+                static show()
+                    {
+                        // super.show();
+                        //Test.show();
+                        document.write("<h2>"+this.x+"</h2>");
+                    }
+            }
+        function f1()
+            {
+                Mix.show();
+            }
+    </script>
+    
+</body>
+</html>

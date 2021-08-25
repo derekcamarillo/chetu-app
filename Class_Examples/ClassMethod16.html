@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Method</title>
+</head>
+<body>
+    <button onclick="f1()">ClickMe</button>
+
+    <script>
+    /* 
+        Q. Static method are Inherited or not.
+        A. Yes, we can Inherit the static method.
+        *- Static Method Never Override. But static method can be inherited.
+        For calling the parent class static method in child class static method we can use class Name.
+        (Super Keyword is also working).
+     */
+        class Test
+            {
+                static show()
+                    {
+                        document.write("<h1>Test class static Method</h1>");
+                    }
+                
+            }
+        class Mix extends Test
+            {
+                static show()
+                    {
+                        // super.show();
+                        Test.show();
+                        document.write("<h2>Mix class static Method</h2>");
+                    }
+            }
+        function f1()
+            {
+                Mix.show();
+            }
+    </script>
+    
+</body>
+</html>
