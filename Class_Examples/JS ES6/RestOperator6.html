@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestOperator(ES6)</title>
+</head>
+<body>
+
+
+    <script>
+  // Passing Array in RestOperator.
+
+        function sum(...args)
+            {
+                let sum = 0;
+                for(x in args)
+                    {
+                        sum += args[x]
+                    }
+                document.write(`<h1>Sum is : ${sum} </h1>`)
+            }
+
+            arr = [10,20,30,40];
+            sum(arr);
+
+    </script>
+
+</body>
+</html>
