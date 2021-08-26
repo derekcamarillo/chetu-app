@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObjectLiterls(ES6)</title>
+</head>
+<body>
+    <script>
+    // Object Literl_Use vaeriable as a Property Name.
+  //Returning Value in ES5
+
+        let n = "Student";   
+        var obj1 = {
+                [n + "Name"] : "Sunil Kumar Maurya",
+                age : 24,
+                details : function()
+                                {
+                                    return `Name is ${this.StudentName} and age is ${this.age}`
+                                }
+            };
+
+        console.log(obj1.details());
+    </script>
+
+</body>
+</html>
