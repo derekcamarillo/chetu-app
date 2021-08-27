@@ -1,0 +1,15 @@
+.field
+    {
+        width: 300px;
+        float: right;
+        border-color: black;
+        border-width: 3px;
+    }
+.leg
+    {
+        color: red;
+    }
+.div
+    {
+        margin: 50px 50px 0 0;
+    }

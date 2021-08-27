@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Checking Sum is Zero</title>
+</head>
+<body>
+<script>
+	//Checking Sum is Zero
+    //[-5, -4, -3, -2, 0, 2, 4, 6, 8]
+    // Output -> [-4, 4]
+	function getPairZero(array) 
+	{
+        document.write(`<h1>Original Array : ${array}</h1>`);
+	    for(let number of array)
+            {
+                for(var j =1; j<array.length; j++)
+                {
+                    if(number + array[j] === 0)
+                        {
+                            return [number, array[j]];
+                        }
+                }
+            }
+	}
+    const result = getPairZero([-5, -4, -3, -2, 0, 2, 4, 6, 8]);
+    document.write(`<h1>Result : ${result}</h1>`);
+	
+</script>
+</body>
+</html>

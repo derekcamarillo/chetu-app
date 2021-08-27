@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Aug26.css">
+    <script src="Aug26.js"></script>
+    
+    <title>Authentication Form</title>
+</head>
+<body>
+    <div class="div">
+        <form action="">
+            <fieldset class="field">
+                <legend class="leg">Authentication Screen</legend>
+                    <table>
+                        <tr>
+                            <td>UserName : </td>
+                            <td><input type="text" placeholder="UserName" id="username"></td>
+                        </tr>
+                        <tr>
+                            <td>User Password : </td>
+                            <td><input type="password" placeholder="Password" id="password"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center"><input type="button" value="Login" onclick="validate()"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><p id="msg"></td>
+                        </tr>
+                    </table>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
