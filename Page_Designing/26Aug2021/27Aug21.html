@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+    <style>
+        .div
+            {
+                float: right;
+                margin: 100px 150px 0 0;
+                background-color: rgb(142, 177, 243);
+                padding: 35px 35px 35px 35px;
+                border-radius: 25px;
+            }
+    </style>
+    <script>
+        function f1()
+            {
+                // if(event.charCode>64 && event.charChode<91)||(event.charCode>64 && event.charChode<91)
+                let name = document.getElementById("name").value;
+                let age = document.getElementById("age").value;
+                let image = document.getElementById("file").value;
+                let gender = document.getElementById("gender").value;
+                let hobby1 = document.getElementById("cook").value;
+                let hobby2 = document.getElementById("swim").value;
+                let hobby3 = document.getElementById("cric").value;
+                let hobby4 = document.getElementById("dance").value;
+
+                alert(`Name : ${name} 
+                       Age : ${age}
+                       Gender : ${gender}
+                       
+                       `);
+
+
+            }
+    </script>
+</head>
+<body>
+
+    <div class="div">
+        <form action="">
+        <table>
+            <tr>
+                <td>Name : </td>
+                <td><input type="text" placeholder="Name" id="name"></td>
+                <td><input type="file" id="file"></td>
+            </tr>
+            <tr>
+                <td>Age : </td>
+                <td><input type="text" placeholder="age" id="age"></td>
+                <td>Image : </td>
+            </tr>
+            <tr>
+                <td>Gender : </td>
+                <td>
+                    Male<input type="radio"  value="male" id="gender">
+                    Female<input type="radio" value="female" id="gender">
+                </td>
+            </tr>
+            <tr>
+                <td>Hobbies : </td>
+                <td>
+                    Cooking<input type="checkbox" value="Cooking" id="cook">
+                    Swiming<input type="checkbox" value="Swiming" id="swim">
+                    Cricket<input type="checkbox" value="Cricket" id="cric">
+                    Danceing<input type="checkbox" value="Danceing" id="dance">
+                </td>
+            </tr>
+            <tr>
+                <td>Date Of Birth : </td>
+                <td><input type="date" id="date"></td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>Address : </td>
+                <td><textarea name="Address" id="addr" cols="22" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td>Qulification : </td>
+                <td> <select name="Qulification" id="qual">
+                    <option value="MCA">MCA</option>
+                    <option value="btech">B.Tech</option>
+                    <option value="BCA">BCA</option>
+                    <option value="bsc">B.Sc(IT)</option>
+                    <option value="Mtech">M.Tech</option>
+                    <option value="Msc">M.Sc(IT)</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td>
+                    <select name="State" id="state">
+                        <option value="UP">Utter Pardesh</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Haryana">Haryana)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center"><input type="button" value="Submit" onclick="f1()"></td>
+            </tr>
+        </table>
+        </form>
+    </div>
+    
+</body>
+</html>
