@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Longest Word String</title>
+</head>
+<body>
+<script>
+	const string = "the sunil shyam maurya kuamr gorakhpur vanarshi delhi";
+  document.write(`<h1>Original String :  ${string}</h1>`)
+  const longStr = (str) => {
+  const strArray = string.split(' ');
+  const sortArr = strArray.sort(
+        (strA, strB) => {
+          return strB.length - strA.length;
+        }
+  );
+  return sortArr[0];
+}
+  document.write(`<h1>Longest Word : ${longStr(string)}</h1>`);
+
+</script>
+</body>
+</html>

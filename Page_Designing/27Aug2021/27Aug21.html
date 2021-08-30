@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+    <style>
+        .div
+            {
+                float: right;
+                margin: 100px 380px 0 0;
+                background-color: rgb(142, 177, 243);
+                padding: 35px 35px 35px 35px;
+                border-radius: 25px;
+            }
+    </style>
+    <script>
+        gender = "";
+        hobby = "";
+        function f1()
+            {
+                // if(event.charCode>64 && event.charChode<91)||(event.charCode>64 && event.charChode<91)
+                let name = document.getElementById("name").value;
+                let age = document.getElementById("age").value;
+                let image = document.getElementById("file").value;
+                let male = document.getElementById("male");
+                let female = document.getElementById("female");
+                let cooking = document.getElementById("cook");
+                let swiming = document.getElementById("swim");
+                let cricket = document.getElementById("cric");
+                let danceing = document.getElementById("dance");
+                let dob = document.getElementById("dob").value;
+                let email = document.getElementById("email").value;
+                let address = document.getElementById("addr").value;
+                let quali = document.getElementById("qual").value;
+                let state = document.getElementById("state").value;
+                
+                if(male.checked==true)
+                    {
+                        gender += "Male";
+                    }
+                if(female.checked==true)
+                    {
+                        gender += "Female";
+                    }
+                if(cooking.checked==true)
+                    {
+                        hobby += " Cooking ";
+                    }
+                if(swiming.checked==true)
+                    {
+                        hobby += " Swiming ";
+                    }
+                if(cricket.checked==true)
+                    {
+                        hobby += " Cricket ";
+                    }
+                if(danceing.checked==true)
+                    {
+                        hobby += " Danceing ";
+                    }
+
+                
+                alert(` Name : ${name}\n Age : ${age}\n Gender : ${gender}\n Hobbies : ${hobby}\n Date of Birth : ${dob}\n Email Id : ${email}\n Address : ${address}\n Qulification : ${quali}\n State : ${state}
+                       
+                       `);
+                gender = "";
+                hooby = "";
+            }
+    </script>
+</head>
+<body>
+
+    <div class="div">
+        <form action="" name="form">
+        <table>
+            <tr>
+                <td>Name : </td>
+                <td><input type="text" placeholder="Name" id="name"></td>
+                <td><input type="file" id="file"></td>
+            </tr>
+            <tr>
+                <td>Age : </td>
+                <td><input type="text" placeholder="age" id="age"></td>
+                <td>Image : </td>
+            </tr>
+            <tr>
+                <td>Gender : </td>
+                <td>
+                    Male<input type="radio"  name="myRadio" id="male">
+                    Female<input type="radio" name="myRadio" id="female">
+                </td>
+            </tr>
+            <tr>
+                <td>Hobbies : </td>
+                <td>
+                    Cooking<input type="checkbox" name="hobbies" id="cook">
+                    Swiming<input type="checkbox" name="hobbies" id="swim">
+                    Cricket<input type="checkbox" name="hobbies" id="cric">
+                    Danceing<input type="checkbox" name="hobbies" id="dance">
+                </td>
+            </tr>
+            <tr>
+                <td>Date Of Birth : </td>
+                <td><input type="date" id="dob"></td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>Address : </td>
+                <td><textarea name="Address" id="addr" cols="22" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td>Qulification : </td>
+                <td>
+                    <select name="Qulification" id="qual">
+                        <option value="MCA">MCA</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="BCA">BCA</option>
+                        <option value="B.Sc(IT)">B.Sc(IT)</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="M.Sc(IT)">M.Sc(IT)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td>
+                    <select name="State" id="state">
+                        <option value="Utter Pardesh">Utter Pardesh</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Haryana">Haryana)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center"><input type="button" value="Submit" onclick="f1()"></td>
+            </tr>
+        </table>
+        </form>
+    </div>
+    
+</body>
+</html>
