@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram 2</title>
+</head>
+<body>
+    <script>
+        var firstWord = prompt("Enter String 1");
+var secondWord = prompt("Enter String 2");
+
+console.log(isAnagram(firstWord, secondWord)); // true
+
+function isAnagram(first, second) {
+  // For case insensitivity, change both words to lowercase.
+  var a = first.toLowerCase();
+  var b = second.toLowerCase();
+
+  // Sort the strings, and join the resulting array to a string. Compare the results
+  a = a.split("").sort().join("");
+  b = b.split("").sort().join("");
+
+  return a === b;
+}
+    </script>
+</body>
+</html>
