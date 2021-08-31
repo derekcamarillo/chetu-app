@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Alphabetical Order</title>
+</head>
+<body>
+    <script>
+        // program to sort words in alphabetical order
+
+        // take input
+        const string = prompt('Enter a sentence: ');
+
+        // converting to an array
+        const words = string.split(' ').sort();
+
+        // sort the array elements
+        // words.sort();
+
+        // display the sorted words
+        document.write('<h1>The sorted words are:</h1>');
+
+        for (const element of words) {
+        document.write(`<h1>${element}</h1>`);
+        }
+    </script>
+</body>
+</html>
