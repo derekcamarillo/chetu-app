@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo JSON</title>
+</head>
+<body>
+    <p id="demo">Result Shown Here.</p>
+    <input type="button" value="Load Data" onclick="loaddata()">
+
+    <script>
+        function loaddata()
+            {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function()
+                    {
+                        if(this.readyState==4 && this.status==200)
+                            {
+                                // document.getElementById("demo").innerHTML = this.responseText;
+                                myobj = JSON.parse(this.responseText);
+                                let data = "<table border='1' align='center' width='50%'>";
+                                    data += "<thead><th>Emp.NO</th><th>Emp.Nmae</th><th>Emp.Sal</th></thead>";
+                                    for(var d in myobj)
+                                        {
+                                            data += "<tr>";
+                                                data +="<td>"+ myobj[d].eno +"</td>";
+                                                data +="<td>"+ myobj[d].ename +"</td>";
+                                                data +="<td>"+ myobj[d].package +"</td>";
+                                            data += "</tr>";
+                                        }
+                                data += "</table>"
+                                document.getElementById("demo").innerHTML=data;
+                            }
+                        else if(this.readyState==4 && this.status==404)
+                            {
+                                document.getElementById("demo").innerHTML = "<h1>Requested Resourse Not Found</h1>"
+                            }
+                    };
+                xhttp.open("GET", "Demo.json", true);
+                xhttp.send();
+            }
+    </script>
+</body>
+</html>
