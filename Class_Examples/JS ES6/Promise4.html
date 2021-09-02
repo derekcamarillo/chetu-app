@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        function prom(complete){
+            return new Promise(function (resolve, reject)
+            {
+            console.log("Fatching Data, Please Wait....")
+            setTimeout(() => {
+                if(complete){
+                    resolve("I am successful.")
+                }
+                else{
+                    reject("I am Fail...")
+                }
+            }, 3000);
+            });
+        }
+    let fullfill = (result) =>{
+        console.log(result);
+    }
+    let rejection = (error) =>{
+        console.log(error);
+    }
+    // prom(true).then(fullfill);
+    // prom(true).catch(rejection);
+
+    prom(true).then(fullfill).catch(rejection);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+let pr=new Promise(resolve,respond)
