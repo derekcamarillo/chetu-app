@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatch With Arrow Method</title>
+</head>
+<body>
+    <p id="demo">Message......</p>
+    <script>
+        fetch("Demo.json")
+        .then(response=> response.json())
+        .then(result=>{
+            document.write("<table border='1' align='center' width='20%' style='margin-top:100px;'>");
+            document.write("<caption>Employee Deatil</caption>");
+            for(x in result){
+                var data = `<tr>
+                                <td width="15%">${result[x].eno}</td>
+                                <td>${result[x].ename}</td>
+                                <td width="25%">${result[x].package}</td>
+                            </tr>`;
+                document.write(data);
+            }
+            document.write("</table>");
+        })
+        .catch(error=>document.getElementById("demo").innerHTML = "<h1>Resourse Not Found.....</h1>");
+    </script>
+</body>
+</html>

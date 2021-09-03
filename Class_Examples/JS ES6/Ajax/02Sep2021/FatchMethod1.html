@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatch Method</title>
+</head>
+<body>
+    <p id="demo">Message......</p>
+    <script>
+        fetch("Demo.txt").then(function(response)
+        {
+            return response.text();
+        })
+        .then(function(result){
+            document.getElementById("demo").innerHTML = `<h1>${result}<h1>`;
+        })
+        .catch(function(error){
+            document.getElementById("demo").innerHTML = "<h1>Resourse Not Found.....</h1>";
+        });
+    </script>
+</body>
+</html>
