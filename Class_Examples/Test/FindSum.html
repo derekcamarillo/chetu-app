@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Sunday</title>
+</head>
+<body>
+    <script>
+        for(let yer = 2012; yer <= 2050; yer++)
+        {
+            let d = new Date(yer, 0, 1);
+            if (d.getDay() === 0)
+            {
+                console.log("Year being sunady is "+yer);
+            }
+        }
+    </script>
+</body>
+</html>

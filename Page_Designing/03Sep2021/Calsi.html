@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .outer{
+            background-color: cadetblue;
+            height: 730px;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .inner{
+            margin: auto;
+            background-color: cornflowerblue;
+            border: 3px solid;
+        }
+        table{
+            padding: 50px;
+        }
+        td{
+            padding: 10px;
+        }
+        .text{
+            padding: 10px 50px;
+            display: block;
+            font-size: 15px;
+        }
+        .btn{
+            padding: 10px 12px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            font-size: 20px;
+            font-weight: bolder;
+            text-align: center;
+        }
+        .btn:hover{
+            background-color: lightslategrey;
+            padding: 10px 12px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            font-size: 20px;
+            font-weight: bolder;
+            text-align: center;
+        }
+        .clr{
+            display: block;
+            width: 100%;
+            padding: 14px 28px;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            font-weight: bolder;
+        }
+        .clr:hover{
+            background-color: lightslategrey;
+            display: block;
+            width: 100%;
+            padding: 14px 28px;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <form action="" name="form">
+                <table border="1">
+                    <caption><h2>Calculator</h2></caption>
+                    <tr>
+                        <td colspan="4"><input type="text" id="res" class="text" name="answer" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="1" class="btn" onclick="form.answer.value += '1'"></td>
+                        <td><input type="button" value="2" class="btn" onclick="form.answer.value += '2'"></td>
+                        <td><input type="button" value="3" class="btn" onclick="form.answer.value += '3'"></td>
+                        <td><input type="button" value="+" class="btn" onclick="form.answer.value += '+'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="4" class="btn" onclick="form.answer.value += '4'"></td>
+                        <td><input type="button" value="5" class="btn" onclick="form.answer.value += '5'"></td>
+                        <td><input type="button" value="6" class="btn" onclick="form.answer.value += '6'"></td>
+                        <td><input type="button" value="-" class="btn" onclick="form.answer.value += '-'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="7" class="btn" onclick="form.answer.value += '7'"></td>
+                        <td><input type="button" value="8" class="btn" onclick="form.answer.value += '8'"></td>
+                        <td><input type="button" value="9" class="btn" onclick="form.answer.value += '9'"></td>
+                        <td><input type="button" value="*" class="btn" onclick="form.answer.value += '*'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="0" class="btn" onclick="form.answer.value += '0'"></td>
+                        <td><input type="button" value="/" class="btn" onclick="form.answer.value += '/'"></td>
+                        <td><input type="button" value="=" class="btn" onclick="form.answer.value = eval(form.answer.value)"></td>
+                        <td><input type="button" value="BC" class="btn" onclick="form.answer.value += ' '"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><input type="button" value="Clear" id="clear" class="clr" onclick="form.answer.value = ' '"></td>
+                    </tr>
+                </table>
+            </form>
+        <div>
+    </div>
+</body>
+</html>
