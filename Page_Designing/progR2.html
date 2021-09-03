@@ -1,0 +1,30 @@
+<!-- wap to find 1st January Between two given year is being a Sunday -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find january</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <input type="button" value="Find" onclick="findJan()">
+    <script>
+        function findJan(){
+            let startyr = parseInt(prompt("enter starting year"));
+            let endyr = parseInt(prompt("enter ending year"));
+            for(let i = startyr; i<= endyr; i++)
+            {
+                const d = new Date(i, 0, 1);
+                if(d.getDay() === 0)
+                {
+                    document.write( `1st January is being a Sunday ${i}</br>`);
+                }
+
+            }
+
+        }
+    </script>
+</body>
+</html>

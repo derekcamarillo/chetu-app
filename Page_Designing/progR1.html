@@ -1,0 +1,23 @@
+<!-- Wap to given two numbers print 1 if one of them divisible by other then,
+otherwise print zero. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <input type="submit" value="click" onclick="f1()">
+    <script>
+        let isDiv = (n1,n2) => {
+             return !(n1%n2) ? console.log("1") : !(n2%n1) ? console.log("1") : console.log("0"); 
+        }
+        let n1 = prompt("enter num1");
+        let n2 = prompt("enter num2");
+        isDiv(n1,n2);
+    </script>
+</body>
+</html>

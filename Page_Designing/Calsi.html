@@ -5,7 +5,7 @@
     <style>
         .outer{
             background-color: cadetblue;
-            height: 720px;
+            height: 730px;
             width: 100%;
             box-sizing: border-box;
             display: flex;
@@ -73,38 +73,38 @@
 <body>
     <div class="outer">
         <div class="inner">
-            <form action="">
+            <form action="" name="form">
                 <table border="1">
                     <caption><h2>Calculator</h2></caption>
                     <tr>
-                        <td colspan="4"><input type="text" id="res" class="text"></td>
+                        <td colspan="4"><input type="text" id="res" class="text" name="answer" readonly></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="1" id="n1" class="btn"></td>
-                        <td><input type="button" value="2" id="n2" class="btn"></td>
-                        <td><input type="button" value="3" id="n3" class="btn"></td>
-                        <td><input type="button" value="+" id="add" class="btn"></td>
+                        <td><input type="button" value="1" class="btn" onclick="form.answer.value += '1'"></td>
+                        <td><input type="button" value="2" class="btn" onclick="form.answer.value += '2'"></td>
+                        <td><input type="button" value="3" class="btn" onclick="form.answer.value += '3'"></td>
+                        <td><input type="button" value="+" class="btn" onclick="form.answer.value += '+'"></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="4" id="n4" class="btn"></td>
-                        <td><input type="button" value="5" id="n5" class="btn"></td>
-                        <td><input type="button" value="6" id="n6" class="btn"></td>
-                        <td><input type="button" value="-" id="sub" class="btn"></td>
+                        <td><input type="button" value="4" class="btn" onclick="form.answer.value += '4'"></td>
+                        <td><input type="button" value="5" class="btn" onclick="form.answer.value += '5'"></td>
+                        <td><input type="button" value="6" class="btn" onclick="form.answer.value += '6'"></td>
+                        <td><input type="button" value="-" class="btn" onclick="form.answer.value += '-'"></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="7" id="n7" class="btn"></td>
-                        <td><input type="button" value="8" id="n8" class="btn"></td>
-                        <td><input type="button" value="9" id="n9" class="btn"></td>
-                        <td><input type="button" value="*" id="mul" class="btn"></td>
+                        <td><input type="button" value="7" class="btn" onclick="form.answer.value += '7'"></td>
+                        <td><input type="button" value="8" class="btn" onclick="form.answer.value += '8'"></td>
+                        <td><input type="button" value="9" class="btn" onclick="form.answer.value += '9'"></td>
+                        <td><input type="button" value="*" class="btn" onclick="form.answer.value += '*'"></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="0" id="n0" class="btn"></td>
-                        <td><input type="button" value="/" id="div" class="btn"></td>
-                        <td><input type="button" value="=" id="equal" class="btn"></td>
-                        <td><input type="button" value="BC" id="bc" class="btn"></td>
+                        <td><input type="button" value="0" class="btn" onclick="form.answer.value += '0'"></td>
+                        <td><input type="button" value="/" class="btn" onclick="form.answer.value += '/'"></td>
+                        <td><input type="button" value="=" class="btn" onclick="form.answer.value = eval(form.answer.value)"></td>
+                        <td><input type="button" value="BC" class="btn" onclick="form.answer.value += ' '"></td>
                     </tr>
                     <tr>
-                        <td colspan="4"><input type="button" value="Clear" id="clr" class="clr"></td>
+                        <td colspan="4"><input type="button" value="Clear" id="clear" class="clr" onclick="form.answer.value = ' '"></td>
                     </tr>
                 </table>
             </form>
