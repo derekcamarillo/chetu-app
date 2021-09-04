@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatch Json</title>
+</head>
+<body>
+    <p id="demo">Message</p>
+    
+    <script>
+        fetch("Demo.json").then(response=>response.json())
+        .then(result=> {
+            document.write("<table border='1'>")
+            document.write("<thead><th>Id</th><th>Name</th><th>UserName</th><th>Email</th><th>Address</th><th>Address Geo</th> <th>Phone</th><th>Website</th><th>Company</th></thead>")
+            for(x in result)
+                {
+                    var data = `<tr>
+                                    <td>${result[x].id}</td>
+                                    <td>${result[x].name}</td>
+                                    <td>${result[x].username}</td>
+                                    <td>${result[x].email}</td>
+                                    <td>
+                                        <ul>
+                                            <li>${result[x].address.street}</li>
+                                            <li>${result[x].address.suite}</li>
+                                            <li>${result[x].address.city}</li>
+                                            <li>${result[x].address.zipcode}</li>
+                                        <ul>    
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Latitude: ${result[x].address.geo.lat}</li>
+                                            <li>Langitude: ${result[x].address.geo.lat}</li>
+                                        </ul>    
+                                    </td>
+                                    <td>${result[x].phone}</td>
+                                    <td>${result[x].website}</td>
+                                    <td>
+                                        <ul>
+                                        </ul>
+                                    </td>
+                                    
+                        </tr>`
+                        document.write(data)
+                        // document.write(result[x].id)
+                }
+            document.write("<table>")
+            
+        })
+        .catch(error=>document.getElementById("demo").innerHTML = `<h1>Resourse Not Found...</h1>`);
+    </script>
+</body>
+</html>
