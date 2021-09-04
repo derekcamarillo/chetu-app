@@ -4,7 +4,7 @@
     <title>Document</title>
     <style>
         .outer{
-            background-color: cadetblue;
+            background: linear-gradient(to right, rgb(247, 195, 153), rgb(143, 228, 228));
             height: 730px;
             width: 100%;
             box-sizing: border-box;
@@ -14,19 +14,28 @@
         }
         .inner{
             margin: auto;
-            background-color: cornflowerblue;
+            background: linear-gradient(to bottom, rgb(78, 133, 252), rgb(168, 94, 238));
             border: 3px solid;
+            border-radius: 15px;
+            /* justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: minmax(120px, auto) repeat(5, 100px); */
         }
         table{
             padding: 50px;
+            
         }
         td{
-            padding: 10px;
+            padding: 4px;
+            
         }
         .text{
-            padding: 10px 50px;
+            padding: 14px 50px;
             display: block;
             font-size: 15px;
+            margin-bottom: 20px;
         }
         .btn{
             padding: 10px 12px;
@@ -36,9 +45,12 @@
             font-size: 20px;
             font-weight: bolder;
             text-align: center;
+            border: 1px, solid, #FFFFFF;
+            /* font-weight: bolder;
+            text-align: center; */
         }
         .btn:hover{
-            background-color: lightslategrey;
+            background-color: rgb(243, 201, 208);
             padding: 10px 12px;
             cursor: pointer;
             display: block;
@@ -56,9 +68,10 @@
             border: none;
             text-align: center;
             font-weight: bolder;
+            margin-top: 10px;
         }
         .clr:hover{
-            background-color: lightslategrey;
+            background-color: rgb(252, 140, 158);
             display: block;
             width: 100%;
             padding: 14px 28px;
@@ -74,7 +87,7 @@
     <div class="outer">
         <div class="inner">
             <form action="" name="form">
-                <table border="1">
+                <table>
                     <caption><h2>Calculator</h2></caption>
                     <tr>
                         <td colspan="4"><input type="text" id="res" class="text" name="answer" readonly></td>
