@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Json</title>
+</head>
+<body>
+    <p id="demo">Message</p>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function()
+        {
+            if(this.readyState==4 && this.status==200)
+            {
+                result = JSON.parse(this.responseText);
+                let data = `<table border='1'>`;
+                data += `<tr>
+                                    <th rowspan="2">ID</th>
+                                    <th rowspan="2">Name</th>
+                                    <th rowspan="2">UserName</th>
+                                    <th rowspan="2">Email</th>
+                                    <th colspan="5">Address</th>
+                                    <th rowspan="2">Phone</th>
+                                    <th rowspan="2">Website</th>
+                                    <th colspan="3">Componey</th>
+                                </tr>
+                                <tr>
+                                    <th>Street</th>
+                                    <th>Suite</th>
+                                    <th>city</th>
+                                    <th>zipcode</th>
+                                    <th>geo</th>
+                                    <th>Name</th>
+                                    <th>CatchPhrase</th>
+                                    <th>BS</th>
+                                </tr>`;
+                for(var x in result)
+                                {
+                                    data += `<tr>
+                                    <td>${result[x].id}</td>
+                                    <td>${result[x].name}</td>
+                                    <td>${result[x].username}</td>
+                                    <td>${result[x].email}</td>
+                                    <td>${result[x].address.street}</td>
+                                    <td>${result[x].address.suite}</td>
+                                    <td>${result[x].address.city}</td>
+                                    <td>${result[x].address.zipcode}</td>
+                                    <td>
+                                        <ul>
+                                            <li>Latitude: ${result[x].address.geo.lat}</li>
+                                            <li>Langitude: ${result[x].address.geo.lat}</li>
+                                        </ul>    
+                                    </td>
+                                    <td>${result[x].phone}</td>
+                                    <td>${result[x].website}</td>
+                                    <td>${result[x].company.name}</td>
+                                    <td>${result[x].company.catchPhrase}</td>
+                                    <td>${result[x].company.bs}</td>
+                                </tr>`;
+                                }
+                        data += "</table>";
+                        document.getElementById("demo").innerHTML=data;
+            }
+            else if(this.readyState==4 && this.status==404)
+                            {
+                                document.getElementById("demo").innerHTML = "<h1>Requested Resourse Not Found</h1>"
+                            }
+        }
+        xhttp.open("GET", "Demo.json", true);
+                xhttp.send();
+    </script>
+</body>
+</html>

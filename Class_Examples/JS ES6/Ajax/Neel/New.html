@@ -13,22 +13,39 @@
         fetch("Demo.json").then(response=>response.json())
         .then(result=> {
             document.write("<table border='1'>")
-            document.write("<thead><th>Id</th><th>Name</th><th>UserName</th><th>Email</th><th>Address</th><th>Address Geo</th> <th>Phone</th><th>Website</th><th>Company</th></thead>")
+            document.write(`<tr>
+                                    <th rowspan="2">ID</th>
+                                    <th rowspan="2">Name</th>
+                                    <th rowspan="2">UserName</th>
+                                    <th rowspan="2">Email</th>
+                                    <th colspan="5">Address</th>
+                                    <th rowspan="2">Phone</th>
+                                    <th rowspan="2">Website</th>
+                                    <th colspan="3">Componey</th>
+                                </tr>
+                                <tr>
+                                    <th>Street</th>
+                                    <th>Suite</th>
+                                    <th>city</th>
+                                    <th>zipcode</th>
+                                    <th>geo</th>
+                                    <th>Name</th>
+                                    <th>CatchPhrase</th>
+                                    <th>BS</th>
+                                </tr>`)
             for(x in result)
                 {
-                    var data = `<tr>
+                    var data = `
+                                
+                                <tr>
                                     <td>${result[x].id}</td>
                                     <td>${result[x].name}</td>
                                     <td>${result[x].username}</td>
                                     <td>${result[x].email}</td>
-                                    <td>
-                                        <ul>
-                                            <li>${result[x].address.street}</li>
-                                            <li>${result[x].address.suite}</li>
-                                            <li>${result[x].address.city}</li>
-                                            <li>${result[x].address.zipcode}</li>
-                                        <ul>    
-                                    </td>
+                                    <td>${result[x].address.street}</td>
+                                    <td>${result[x].address.suite}</td>
+                                    <td>${result[x].address.city}</td>
+                                    <td>${result[x].address.zipcode}</td>
                                     <td>
                                         <ul>
                                             <li>Latitude: ${result[x].address.geo.lat}</li>
@@ -37,14 +54,9 @@
                                     </td>
                                     <td>${result[x].phone}</td>
                                     <td>${result[x].website}</td>
-                                    <td>
-                                        <ul>
-                                            <li>${result[x].company.name}</li>
-                                            <li>${result[x].company.catchPhrase}</li>
-                                            <li>${result[x].company.bs}</li>
-                                        </ul>
-                                    </td>
-                                    
+                                    <td>${result[x].company.name}</td>
+                                    <td>${result[x].company.catchPhrase}</td>
+                                    <td>${result[x].company.bs}</td>
                         </tr>`
                         document.write(data)
                         // document.write(result[x].id)
