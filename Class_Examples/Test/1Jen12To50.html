@@ -1,0 +1,22 @@
+<!-- Write a Program find 1st Jan being Sunady between 2012 to 2050 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count 1 Jan</title>
+</head>
+<body>
+    <script>
+        for(var year=2012; year<=2050; year++)
+        {
+            var d = new Date(year, 0, 1);
+            if(d.getDay()===0)
+            {
+                console.log("1 Jan is being a Sunday " + year)
+            }
+        }
+    </script>
+</body>
+</html>

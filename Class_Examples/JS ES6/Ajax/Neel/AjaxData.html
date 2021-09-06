@@ -5,6 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajax Json</title>
+    <style>
+        div{
+            overflow-x:auto;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        table{
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td{
+            text-align: center;
+            padding: 8px;
+            border: 1px solid black;
+        }
+        td:nth-child(even) 
+        {
+            background-color: #D6EEEE;
+        }
+        th{
+            background-color: rgb(253, 177, 36);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <p id="demo">Message</p>
@@ -15,7 +44,7 @@
             if(this.readyState==4 && this.status==200)
             {
                 result = JSON.parse(this.responseText);
-                let data = `<table border='1'>`;
+                let data = `<div><table>`;
                 data += `<tr>
                                     <th rowspan="2">ID</th>
                                     <th rowspan="2">Name</th>
@@ -48,10 +77,12 @@
                                     <td>${result[x].address.city}</td>
                                     <td>${result[x].address.zipcode}</td>
                                     <td>
-                                        <ul>
-                                            <li>Latitude: ${result[x].address.geo.lat}</li>
-                                            <li>Langitude: ${result[x].address.geo.lat}</li>
-                                        </ul>    
+                                        <dl>
+                                            <dt><b>Latitude:</b></dt>
+                                            <dd>${result[x].address.geo.lat}</dd>
+                                            <dt><b>Langitude:</b></dt>
+                                            <dd>${result[x].address.geo.lng}</dd>
+                                        </dl>    
                                     </td>
                                     <td>${result[x].phone}</td>
                                     <td>${result[x].website}</td>
@@ -60,7 +91,7 @@
                                     <td>${result[x].company.bs}</td>
                                 </tr>`;
                                 }
-                        data += "</table>";
+                        data += "</table></div>";
                         document.getElementById("demo").innerHTML=data;
             }
             else if(this.readyState==4 && this.status==404)
