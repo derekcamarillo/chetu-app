@@ -10,6 +10,7 @@ list-style-type: none;
 overflow: hidden;
 background-color: #333;
 font-weight: bolder;
+font-size: larger;
 
 `;
 
