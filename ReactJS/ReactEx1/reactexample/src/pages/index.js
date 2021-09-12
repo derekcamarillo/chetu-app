@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from '../Cards/Cards.jsx';
 
 let currDate = new Date();
 currDate = currDate.getHours();
@@ -20,12 +21,19 @@ else if(currDate >= 20 && currDate < 24)
 		cssStyle.color = "black";
 	}
 
+
 const Home = () => {
 return (
+	<>
 	<div>
 	<h1>Welcome to Homepage, <span style={cssStyle}> {greeting} </span></h1>
 	</div>
+	<div>
+	<Card />
+	</div>
+	</>
 );
 };
+
 
 export default Home;
