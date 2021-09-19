@@ -1,0 +1,20 @@
+.container{
+font-size: large;
+ color: white;
+ list-style: none;
+ text-align: center;
+ text-decoration: none;
+}
+.footout{
+    padding: 20px;
+    background-color: #333;
+}
+.a:link {
+    text-decoration: none;
+    color: white;
+  }
+a:hover{
+    text-decoration: none;
+    color: white;
+    font-size: 150%;
+}

@@ -1,0 +1,24 @@
+{
+  "login": [
+    {
+      "name": "SunilMaurya",
+      "email": "Sunil@gmail.com",
+      "mobile": "9170434170",
+      "date": "1996-06-10",
+      "address": "Mamura",
+      "company": "chetu",
+      "pass": "Sunil@123",
+      "id": 1
+    },
+    {
+      "name": "Neel Maurya",
+      "email": "Neel@gmail.com",
+      "mobile": "12345678",
+      "date": "1996-03-21",
+      "address": "Mamura",
+      "company": "chetu",
+      "pass": "123456",
+      "id": 2
+    }
+  ]
+}
