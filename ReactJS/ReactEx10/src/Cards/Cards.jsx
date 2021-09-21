@@ -5,7 +5,7 @@ import img2 from '../images/kitchen.jpg';
 import img3 from '../images/alone.jpg';
 import img4 from '../images/music.jpg';
 import img5 from '../images/c1.jpg';
-import img6 from '../images/c.gif';
+import img6 from '../images/c.jpg';
 import img7 from '../images/c2.jpg';
 import img8 from '../images/a3.jpg';
 

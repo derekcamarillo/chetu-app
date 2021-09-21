@@ -1,74 +1,72 @@
-import React, {Component} from 'react'
-import axios from 'axios'
-import {  Table } from "semantic-ui-react";
+import React, {useState, useEffect} from 'react';
+import { useHistory } from 'react-router';
+import axios from 'axios';
+import './team.css';
 
-export default class Teams extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            Users: []
-        };
+
+function Teams(){
+    const url = `http://localhost:3000/login`;
+    // const [email] = useState("");
+    const [data, setData] = useState([])
+    const history = useHistory();
+
+  
+    useEffect(() => {
+      axios.get(url).then(json => setData(json.data))
+      // eslint-disable-next-line
+    }, [])
+    
+    const HandleDelete = (id) =>{
+        axios.delete(`${url}/${id}`)
+        .then(function(resp){
+          console.log(resp)
+          axios.get(url).then(json => setData(json.data))
+        })
     }
-    getUsersData() {
-        axios
-            .get(`http://localhost:3000/login`, {})
-            .then(res => {
-                const data = res.data
-                console.log(data)
-                const users = data.map(el =>
-                    <div>
-                    <Table className='table'>
-					<Table.Body>
-						<Table.Row key={el.id}>
-							<Table.Cell>{el.id}</Table.Cell>
-							<Table.Cell>{el.name}</Table.Cell>
-							<Table.Cell>{el.email}</Table.Cell>
-							<Table.Cell>{el.mobile}</Table.Cell>
-							<Table.Cell>
-							{el.address}
-							</Table.Cell>
-							<Table.Cell>{el.date}</Table.Cell>
-							<Table.Cell>{el.company}</Table.Cell>
-						</Table.Row>
-					</Table.Body>
-				</Table>
-                    </div>
-                    )
-
-                    this.setState({
-                        users
-                    })
-
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-
+    const HandleUpdate = (id)=> {
+      history.push('/update')
     }
-    componentDidMount(){
-        this.getUsersData()
-    }
-    render() {
-
+    const renderTable = () => {
+      return data.map(user => {
         return (
-            <div>
-				<Table className='table'>
-				<Table.Header className='tablehead'>
-					<Table.Row>
-						<Table.HeaderCell>Id</Table.HeaderCell>
-						<Table.HeaderCell>Name</Table.HeaderCell>
-						<Table.HeaderCell>Email</Table.HeaderCell>
-						<Table.HeaderCell>mobile</Table.HeaderCell>
-						<Table.HeaderCell>Address</Table.HeaderCell>
-						<Table.HeaderCell>DoB</Table.HeaderCell>
-						<Table.HeaderCell>Website</Table.HeaderCell>
-					</Table.Row>
-					</Table.Header>
-					
-					</Table>
-					{this.state.users}
-
-            </div>
+          <tr>
+            <td>{user.id}</td>
+            <td>{user.name}</td>
+            <td>{user.date}</td>
+            <td>{user.email}</td>
+            <td>{user.mobile}</td>
+            <td>{user.address}</td>
+            <td>{user.company}</td>
+            <td><button className="update" onClick={()=>HandleUpdate(user.id)}>Update</button></td>
+            <td><button className="delete" onClick={()=>HandleDelete(user.id)}>Delete</button></td>
+          </tr>
         )
-    }
-}
+      })
+    };
+  
+    return (
+      <div className='parent'>
+          <h1 id="title">API Table</h1>
+          <div className='child'>
+            <table id="users">
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>DoB</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Address</th>
+                <th>Company</th>
+                <th>Update</th>
+                <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>{renderTable()}</tbody>
+            </table>
+        </div>
+      </div>
+    )
+  }
+  
+  export default Teams;

@@ -1,8 +1,32 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import './event.css';
+import TextField from '@material-ui/core/TextField';
+import TextareaAutosize from '@material-ui/core/TextareaAutosize';
+import { makeStyles } from '@material-ui/core/styles';
+import SendIcon from '@material-ui/icons/Send';
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+	  display: 'flex',
+	  flexWrap: 'wrap',
+	},
+	textField: {
+		marginTop: 20,
+		fontSize: '1rem',
+		marginLeft: theme.spacing(1),
+		marginRight: theme.spacing(1),
+		width: '35ch',
+	},
+	button: {
+		marginTop: 29,
+		margin: theme.spacing(1),
+	  },
+  }));
 
 export default function Events() {
+	const classes = useStyles();
   function sendEmail(e) {
 	const user_email = document.getElementById("mail").value;
     e.preventDefault();
@@ -18,36 +42,53 @@ export default function Events() {
   return (
 	  <div className="main">
             <div className="inner">
-			<h1>Registration Form</h1>
+			<h1>Contect Us</h1>
+			<div className='{classes.root}'>
 			<form className="contact-form" onSubmit={sendEmail}>
-                <div className="row">
-					<div className="col-25">
-						<label>Name</label>
-					</div>
-					<div className="col-75">
-						<input type="text" name="name" />
-					</div>
+			<div>
+				<TextField
+					label="Name"
+					type='text'
+					id="name"
+					className={classes.textField}
+					helperText="Enter Your User Name"
+					name='name'
+				/>
 				</div>
-                <div className="row">
-					<div className="col-25">
-                    	<label>Email</label>
-					</div>
-					<div className="col-75">
-						<input type="email" name="user_email" id="mail" />
-					</div>
-                </div>
-				<div className="row">
-					<div className="col-25">
-						<label>Message</label>
-					</div>
-					<div className="col-75">
-						<textarea name="message" />	
-					</div>
-                </div>
-                <div className="row">
-					<input type="submit" value="Send" />
+                <div>
+				<TextField
+					label="Email"
+					type="email"
+					id="mail"
+					name="user_email"
+					className={classes.textField}
+					helperText="Enter Your Email Address"
+				/>
+				</div>
+				<div>
+					<TextareaAutosize
+						aria-label="minimum height"
+						minRows={4}
+						name="message"
+						className={classes.textField}
+						placeholder="Enter your Message."
+					/>
+				</div>
+				<div>
+				<Button
+					variant="contained"
+					color="default"
+					size="large"
+					type="submit"
+					value="Send"
+					className={classes.button}
+					startIcon={<SendIcon />}
+				>
+					Send Responce
+				</Button>
 				</div>
                 </form>
+				</div>
             </div>
 	</div>
 	

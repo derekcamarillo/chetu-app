@@ -11,6 +11,7 @@ import Blogs from './pages/blogs';
 import SignUp from './pages/signup';
 import Signin from './pages/signin';
 import Footer from './components/Navbar/footer';
+import Update from './pages/update'
 
 function App() {
 return (<>
@@ -25,6 +26,7 @@ return (<>
 		<Route path='/blogs' component={Blogs} />
 		<Route path='/sign-up' component={SignUp} />
     	<Route path='/signin' component={Signin} />
+		<Route path='/update' component={Update} />
 	</Switch>
 	</Router>
 	<Footer />
