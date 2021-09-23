@@ -67,6 +67,7 @@ return (
                 <form onSubmit={(e) => submit(e)}>
                 <div>
 				<TextField
+					required
 					label="UserName"
 					type='text'
 					onChange={(e) => handle(e)}
@@ -78,6 +79,7 @@ return (
 				</div>
                 <div>
 				<TextField
+					required
 					label="Email"
 					type="email"
 					onChange={(e) => handle(e)}
@@ -89,6 +91,7 @@ return (
 				</div>
 				<div>
 				<TextField
+					required
 					label="Mobile No"
 					type="number"
 					onChange={(e) => handle(e)}
@@ -100,6 +103,7 @@ return (
 				</div>
 				<div>
 				<TextField
+					required
 					type="date"
 					onChange={(e) => handle(e)}
 					id="date"
@@ -110,6 +114,7 @@ return (
 				</div>
 				<div>
 					<TextField
+						required
 						label="Address"
 						type="text"
 						onChange={(e) => handle(e)}
@@ -121,6 +126,7 @@ return (
 				</div>
                 <div>
 					<TextField
+						required
 						label="Company"
 						type="text"
 						onChange={(e) => handle(e)}
@@ -132,6 +138,7 @@ return (
 				</div>
 				<div>
 					<TextField
+						required
 						label="Password"
 						type="password"
 						onChange={(e) => handle(e)}

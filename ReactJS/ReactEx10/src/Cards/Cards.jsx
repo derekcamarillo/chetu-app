@@ -16,7 +16,7 @@ class Cards extends Component{
             <div className="container-fluid d-flex justify-content-center">
                 <div className="row">
                     <div className="col-md-3">
-                        <Card imgsrc={img1} title='Adventure'/>
+                        <Card imgsrc={img1} title='Adventure' btn={'/Api1'}/>
                     </div>
                     <div className="col-md-3">
                         <Card imgsrc={img2} title='Cooking'/>
@@ -25,7 +25,7 @@ class Cards extends Component{
                         <Card imgsrc={img3} title='Playground'/>
                     </div>
                     <div className="col-md-3">
-                        <Card imgsrc={img4} title='Dancing'/>
+                        <Card imgsrc={img4} title='Dancing' btn={'/team'} />
                     </div>
                 </div> 
             </div>

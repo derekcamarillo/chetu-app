@@ -1,3 +1,18 @@
-.aboutdiv{
-    margin: 50px;
+.MuiTableHead-root{
+    font-weight: bolder;
+    font-size: larger;
+}
+
+/* .MuiDataGrid-root .MuiDataGrid-columnHeaderDraggableContainer{
+    display: none!important;
+} */
+.MuiDataGrid-columnHeaderDraggableContainer{
+    background: #fa9e9e;
+    font-size: x-large;
+}
+.MuiDataGrid-columnSeparator{
+    background: #fa9e9e;
+}
+.MuiDataGrid-root .MuiDataGrid-cell--textLeft{
+    font-size: 18px;
 }

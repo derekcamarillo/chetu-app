@@ -29,6 +29,76 @@
       "company": "cds",
       "pass": "123",
       "id": 5
+    },
+    {
+      "name": "c",
+      "email": "c@gmail.com",
+      "mobile": "123",
+      "date": "2021-09-04",
+      "address": "Mamura",
+      "company": "cds",
+      "pass": "123",
+      "id": 6
+    },
+    {
+      "name": "d",
+      "email": "e@gmail.com",
+      "mobile": "123",
+      "date": "2021-09-04",
+      "address": "Mamura",
+      "company": "cds",
+      "pass": "123",
+      "id": 7
+    },
+    {
+      "name": "SunilMaurya",
+      "email": "Sunil@gmail.com",
+      "mobile": "9170434170",
+      "date": "1996-06-10",
+      "address": "Mamura",
+      "company": "chetu",
+      "pass": "123456789",
+      "id": 8
+    },
+    {
+      "name": "RaviKant",
+      "email": "Ravi@gmail.com",
+      "mobile": "9896979594",
+      "date": "1997-11-10",
+      "address": "Gorakhpur",
+      "company": "Sarthii",
+      "pass": "123456",
+      "id": 9
+    },
+    {
+      "name": "Neel Maurya",
+      "email": "Neel@gmail.com",
+      "mobile": "8840128646",
+      "date": "1996-03-10",
+      "address": "Gorakhpur",
+      "company": "Business",
+      "pass": "9898",
+      "id": 11
+    },
+    {
+      "name": "Sonu",
+      "email": "sonu@gmail.com",
+      "mobile": "1234556",
+      "date": "2000-05-17",
+      "address": "Mamura",
+      "company": "chetu",
+      "pass": "123456",
+      "id": 12
+    },
+    {
+      "name": "Vipin Kumar",
+      "email": "Sunil@gmail.com",
+      "mobile": "1242",
+      "date": "2021-09-09",
+      "address": "Delhi",
+      "company": "zxcvz",
+      "pass": "123",
+      "id": 13
     }
   ]
 }

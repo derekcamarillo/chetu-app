@@ -13,7 +13,7 @@ const Card = props => {
                     <p className="card-text text-secondary">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat unde culpa magni possimus. Molestias, dicta necessitatibus, quam beatae provident nemo doloremque quod est perferendis aliquid cupiditate eius ea, quae voluptate!
                     </p>
-                    <a href='/' className="btn btn-outline-success">See More</a>
+                    <a href={props.btn} className="btn btn-outline-success">See More</a>
                 </div> 
             </div>  
         </>

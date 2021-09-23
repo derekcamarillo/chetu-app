@@ -12,6 +12,7 @@ import SignUp from './pages/signup';
 import Signin from './pages/signin';
 import Footer from './components/Navbar/footer';
 import Update from './pages/update'
+import Api1 from './API/Api1'
 
 function App() {
 return (<>
@@ -27,6 +28,7 @@ return (<>
 		<Route path='/sign-up' component={SignUp} />
     	<Route path='/signin' component={Signin} />
 		<Route path='/update' component={Update} />
+		<Route path='/Api1' component={Api1} />
 	</Switch>
 	</Router>
 	<Footer />
