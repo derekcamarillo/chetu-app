@@ -19,7 +19,7 @@ class Cards extends Component{
                         <Card imgsrc={img1} title='Adventure' btn={'/Api1'}/>
                     </div>
                     <div className="col-md-3">
-                        <Card imgsrc={img2} title='Cooking'/>
+                        <Card imgsrc={img2} title='Cooking' btn={'/Api2'} />
                     </div>
                     <div className="col-md-3">
                         <Card imgsrc={img3} title='Playground'/>

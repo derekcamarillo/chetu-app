@@ -1,0 +1,40 @@
+.home {
+    display: flex;
+    font-size: 2rem;
+    background-color: #dbdbdb;
+}
+
+.main {
+    margin-left: 260px !important;
+    width: 100%;
+    height: max-content;
+    margin: 15px 25px;
+}
+
+.card1 {
+    width: 250px;
+    background-color: #CB98ED;
+    border: 2px solid #a67ec0;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 50px;
+}
+.card2 {
+    width: 250px;
+    background-color: #E5D1B8;
+    border: 2px solid #ceb89d;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 50px;
+}
+.card3 {
+    width: 250px;
+    background-color: #88CDF6;
+    border: 2px solid #63a9d1;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 50px;
+}

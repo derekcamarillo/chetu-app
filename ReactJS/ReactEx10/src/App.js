@@ -13,6 +13,8 @@ import Signin from './pages/signin';
 import Footer from './components/Navbar/footer';
 import Update from './pages/update'
 import Api1 from './API/Api1'
+import Api2 from './API/Api2'
+import Api3F from './API/Api3/Api3F';
 
 function App() {
 return (<>
@@ -29,6 +31,8 @@ return (<>
     	<Route path='/signin' component={Signin} />
 		<Route path='/update' component={Update} />
 		<Route path='/Api1' component={Api1} />
+		<Route path='/Api2' component={Api2} />
+		<Route path='/Api3' component={Api3F} />
 	</Switch>
 	</Router>
 	<Footer />
