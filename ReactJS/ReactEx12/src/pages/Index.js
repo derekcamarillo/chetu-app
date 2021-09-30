@@ -1,25 +1,24 @@
-import React,{ useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./index.css"
 // import axios from 'axios';
 
-const Index = ()=>{
+const Index = () => {
     const [data, setData] = useState([])
-    const getCovidData = async() =>
-    {
-        try{
+    const getCovidData = async () => {
+        try {
             const res = await fetch(`https://data.covid19india.org/data.json`);
             const actualData = await res.json();
             console.log(actualData.statewise[0]);
             setData(actualData.statewise[0]);
-        }catch(err){
+        } catch (err) {
             console.log(err);
         }
     }
-  
+
     useEffect(() => {
-      getCovidData();
-    }, []) 
-    
+        getCovidData();
+    }, [])
+
 
 
     return (
