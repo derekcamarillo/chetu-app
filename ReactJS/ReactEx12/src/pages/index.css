@@ -1,87 +1,159 @@
 .home {
-    /* margin-left: 260px; */
     display: flex;
-    font-size: 2rem;
     background-color: #dbdbdb;
 }
 
-.main {
-    margin-left: 260px !important;
-    width: 100%;
-    height: max-content;
-    margin: 15px 25px;
+
+@media all and (min-width:150px){
+    .main2 {
+        margin-left: 25px;
+        width: 100%;
+    }
+    .card {
+        width: 80px;
+        font-size: small;
+        background-color: #E5D1B8;
+        border: 2px solid #ceb89d;
+        text-align: center;
+        display: inline-block;
+        margin: 10px 5px;
+        padding: 10px;
+    }
 }
 
-.card1 {
-    width: 250px;
-    background-color: #CB98ED;
-    border: 2px solid #a67ec0;
-    text-align: center;
-    display: inline-block;
-    margin: 10px 15px;
-    padding: 50px;
+@media all and (min-width:512px) {
+    .main2 {
+        margin-left: 50px;
+        width: 100%;
+    }
+    .card {
+        width: 150px;
+        background-color: #E5D1B8;
+        border: 2px solid #ceb89d;
+        text-align: center;
+        display: inline-block;
+        margin: 10px 50px;
+        padding: 10px;
+        
+    }
 }
-.card2 {
+
+@media (min-width:700px) {
+    .main2 {
+        margin: 100px 100px 100px 250px !important;
+        width: 100%;
+        height: max-content;
+        margin: 5px 5px;
+    }
+    
+    .card {
+        width: 350px;
+        background-color: #E5D1B8;
+        border: 2px solid #ceb89d;
+        font-size: larger;
+        text-align: center;
+        display: inline-block;
+        margin: 15px 70px;
+        padding: 30px;
+    }
+    .card:hover {
+        box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
+    }
+    .ch {
+        margin-bottom: 0px;
+    }
+    .chartmain{
+        background-color: #a5f3d8;
+        margin: 5px;
+        width: 100%;
+        padding: 25px;
+    }
+    .chartsCh1{
+        background-color: #b4db90;
+        margin: 5px 25px 10px 240px;
+        display: inline-block;
+        text-align: center;
+        width: 360px;
+        border-radius: 9px;
+    }
+    .Piediv{
+        text-align: center;
+        font-size: medium;
+        font-weight: bold;
+        width: 360px;
+    }
+    .chartsCh2{
+        background-color: #b4db90;
+        text-align: center;
+        margin: 5px 25px 10px 10px;
+        display: inline-block;
+        width: 360px;
+        border-radius: 9px;
+    }
+}
+
+/* .main2 {
+    width: 100%;
+    height: max-content;
+    margin: 5px 5px;
+}
+
+.card:hover {
+    box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
+}
+
+.card {
     width: 250px;
     background-color: #E5D1B8;
     border: 2px solid #ceb89d;
     text-align: center;
     display: inline-block;
-    margin: 10px 15px;
-    padding: 50px;
-}
-.card3 {
-    width: 250px;
-    background-color: #88CDF6;
-    border: 2px solid #63a9d1;
-    text-align: center;
-    display: inline-block;
-    margin: 10px 15px;
-    padding: 50px;
+    margin: 10px 10px;
+    padding: 10px;
 }
 
-@media (max-width: 768px) {
-    .main {
-        margin-left: 0px;
-        width: 100%;
-    }
-    .card1 {
-        width: 250px;
-        text-align: center;
-        text-align: justify;
-    }
-    .card2 {
-        width: 250px;
-        text-align: center;
-        text-align: justify;
-    }
-    .card3 {
-        width: 250px;
-        text-align: center;
-        text-align: justify;
-    }
-    
-    
+.ch {
+    margin-bottom: 0px;
 }
 
-@media (max-width: 420px),(min-width : 100px) {
-    .main {
-        margin-left: 0px;
+@media(min-width:512px){
+    .main2 {
+        margin-left: 100px!important;
         width: 100%;
-        height: max-content;
-        margin: 15px 25px;
     }
-    .card1 {
-        width: 200px;
+    .card {
+        width: 150px;
+        text-align: center;
+        text-align: justify;
+    }
+}
+
+@media (min-width:150px){
+    .card {
         text-align: center;
         font-size: small;
     }
-    .card2 {
-        width: 200px;
-        text-align: center;
-    }
-    .card3 {
-        width: 200px;
-        text-align: center;
-    }
+} */
+
+
+/* .chartmain{
+    background-color: aquamarine;
+    margin: 5px;
+    width: 100%;
+    padding: 25px;
 }
+.chartsCh1{
+    background-color: #b4db90;
+    margin: 5px 25px 10px 250px;
+    display: inline-block;
+    width: 400px;
+    padding: 100px;
+}
+.chartsCh2{
+    background-color: #b4db90;
+    margin: 5px 25px 10px 20px;
+    display: inline-block;
+    width: 400px;
+    padding: 100px;
+} */
+

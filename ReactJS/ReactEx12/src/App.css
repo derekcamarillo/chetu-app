@@ -10,8 +10,14 @@
   .support {
   display: flex;
   margin-left: 260px;
-  font-size: 2rem;
   }
 .logo{
-  margin: 250px;
+  margin: 200px;
 }  
+@media (max-width:512px)
+{
+  .logo{
+    text-align: left;
+    margin-left: 50px;
+  }
+}
