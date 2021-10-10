@@ -1,0 +1,64 @@
+{
+  "user": [
+    {
+      "name": "Sonu",
+      "email": "sonu@gmail.com",
+      "mobile": "1234556",
+      "date": "2000-05-17",
+      "address": "Mamura",
+      "company": "chetu",
+      "pass": "123456",
+      "id": 12
+    },
+    {
+      "name": "Vipin Kumar",
+      "email": "Sunil@gmail.com",
+      "mobile": "1242",
+      "date": "2021-09-09",
+      "address": "Delhi",
+      "company": "zxcvz",
+      "pass": "123",
+      "id": 13
+    },
+    {
+      "name": "Sunil Kumar Maurya",
+      "email": "Sunil123@gmail.com",
+      "mobile": "9170434170",
+      "date": "1996-03-21",
+      "address": "Gorakhpur",
+      "company": "Chetu",
+      "pass": "Sunil123@",
+      "id": 14
+    },
+    {
+      "name": "amit Singh",
+      "email": "amit@gmail.com",
+      "mobile": "123",
+      "date": "1997-06-10",
+      "address": "delhi",
+      "company": "ghyan",
+      "pass": "123",
+      "id": 15
+    },
+    {
+      "name": "qw asd",
+      "email": "qw@gmail.com",
+      "mobile": "123",
+      "date": "1990-02-10",
+      "address": "qwww",
+      "company": "qqq",
+      "pass": "qqqq",
+      "id": 16
+    },
+    {
+      "name": "qqq",
+      "email": "qq@gmail.com",
+      "mobile": "123",
+      "date": "1994-12-10",
+      "address": "sa",
+      "company": "sa",
+      "pass": "123",
+      "id": 17
+    }
+  ]
+}
