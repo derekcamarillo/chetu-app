@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This is Multidimensional Array -->
+	<meta charset="utf-8">
+	<title>Multidimensional Array</title>
+	<script>
+		var arr = [
+					["Sunil Kumar",25,"Male","MCA"],
+					["Ravikant",24,"Male","B.Tech"],
+					["Shyam Sundar",23,"Male","MCA"],
+					["Vandana Sharma",26,"Female","BA"],
+					["Vandana",26,"Female","MA"],
+					["Sharma",26,"Female","MBA"],
+					["Neel Maurya",25,"Male","B.Sc(IT)"]
+		];
+		document.write("<table border='2px'>");
+		document.write("<th>"+"Name"+"</th>");
+		document.write("<th>"+"Age"+"</th>");
+		document.write("<th>"+"Gender"+"</th>");
+		document.write("<th>"+"Course"+"</th>");
+		
+		for (var i = 0; i < arr.length; i++) {
+			document.write("<tr>");
+			for (var j = 0; j < arr[i].length; j++) {
+				document.write("<td>"+ arr[i][j] + "</td>");
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>");
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
