@@ -1,0 +1,21 @@
+{
+  "login": [
+    {
+      "FirstName": "sunil",
+      "LastName": "maurya",
+      "Guardian": "ram",
+      "GuardianMobile": "9191919191",
+      "PatientEmail": "sunil@gmil.com",
+      "GuardianEmail": "sunil@gmil.com",
+      "ParentMobile": "1234567890",
+      "AlterNetMobile": "1234567890",
+      "DateOfBirth": "2010-06-19",
+      "DateOfAdmit": "2021-10-18",
+      "PatientProblem": "stone",
+      "DrName": "Dr.Neel",
+      "CurrentAddress": "Mamura",
+      "ParmanentAddress": "GKP",
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+.Home-main-div{
+    padding: 8px;
+    width: 100%;
+    /* background-image: url("../assets/BackGround.jpg"); */
+    /* background-color: whitesmoke; */
+}
+.Chat-Div {
+    position: relative;
+}
+
+.Chat-Btn {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+}
+.Home4-Datatable{
+    padding: 50px;
+    width: 100%;
+}
